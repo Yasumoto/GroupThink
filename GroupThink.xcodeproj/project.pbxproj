@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
+		D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
+		D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
+		D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D82CB1FB1556051A00499A08 /* InfoPlist.strings */; };
+		D82CB1FF1556051A00499A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB1FE1556051A00499A08 /* main.m */; };
+		D82CB2031556051A00499A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB2021556051A00499A08 /* AppDelegate.m */; };
+		D82CB2051556051A00499A08 /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2041556051A00499A08 /* GroupThink.entitlements */; };
+		D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */; };
+		D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */; };
+		D82CB20E1556051A00499A08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB20D1556051A00499A08 /* ViewController.m */; };
+		D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB2151556051A00499A08 /* SenTestingKit.framework */; };
+		D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
+		D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
+		D82CB2201556051A00499A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D82CB21E1556051A00499A08 /* InfoPlist.strings */; };
+		D82CB2231556051A00499A08 /* GroupThinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB2221556051A00499A08 /* GroupThinkTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D82CB2191556051A00499A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D82CB1E51556051A00499A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82CB1ED1556051A00499A08;
+			remoteInfo = GroupThink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D82CB1EE1556051A00499A08 /* GroupThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82CB1F21556051A00499A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D82CB1F41556051A00499A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D82CB1F61556051A00499A08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D82CB1FA1556051A00499A08 /* GroupThink-Info.plist */ = {isa = PBXFileReference; path = "GroupThink-Info.plist"; sourceTree = "<group>"; };
+		D82CB1FC1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D82CB1FE1556051A00499A08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D82CB2001556051A00499A08 /* GroupThink-Prefix.pch */ = {isa = PBXFileReference; path = "GroupThink-Prefix.pch"; sourceTree = "<group>"; };
+		D82CB2011556051A00499A08 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		D82CB2021556051A00499A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D82CB2041556051A00499A08 /* GroupThink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
+		D82CB2071556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D82CB20A1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		D82CB20C1556051A00499A08 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		D82CB20D1556051A00499A08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D82CB2141556051A00499A08 /* GroupThinkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupThinkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82CB2151556051A00499A08 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D82CB21D1556051A00499A08 /* GroupThinkTests-Info.plist */ = {isa = PBXFileReference; path = "GroupThinkTests-Info.plist"; sourceTree = "<group>"; };
+		D82CB21F1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D82CB2211556051A00499A08 /* GroupThinkTests.h */ = {isa = PBXFileReference; path = GroupThinkTests.h; sourceTree = "<group>"; };
+		D82CB2221556051A00499A08 /* GroupThinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupThinkTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D82CB1EB1556051A00499A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */,
+				D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */,
+				D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CB2101556051A00499A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */,
+				D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */,
+				D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D82CB1E31556051A00499A08 = {
+			isa = PBXGroup;
+			children = (
+				D82CB1F81556051A00499A08 /* GroupThink */,
+				D82CB21B1556051A00499A08 /* GroupThinkTests */,
+				D82CB1F11556051A00499A08 /* Frameworks */,
+				D82CB1EF1556051A00499A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D82CB1EF1556051A00499A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB1EE1556051A00499A08 /* GroupThink.app */,
+				D82CB2141556051A00499A08 /* GroupThinkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D82CB1F11556051A00499A08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB1F21556051A00499A08 /* UIKit.framework */,
+				D82CB1F41556051A00499A08 /* Foundation.framework */,
+				D82CB1F61556051A00499A08 /* CoreGraphics.framework */,
+				D82CB2151556051A00499A08 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D82CB1F81556051A00499A08 /* GroupThink */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB2011556051A00499A08 /* AppDelegate.h */,
+				D82CB2021556051A00499A08 /* AppDelegate.m */,
+				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
+				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
+				D82CB20C1556051A00499A08 /* ViewController.h */,
+				D82CB20D1556051A00499A08 /* ViewController.m */,
+				D82CB1F91556051A00499A08 /* Supporting Files */,
+			);
+			path = GroupThink;
+			sourceTree = "<group>";
+		};
+		D82CB1F91556051A00499A08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB1FA1556051A00499A08 /* GroupThink-Info.plist */,
+				D82CB1FB1556051A00499A08 /* InfoPlist.strings */,
+				D82CB1FE1556051A00499A08 /* main.m */,
+				D82CB2001556051A00499A08 /* GroupThink-Prefix.pch */,
+				D82CB2041556051A00499A08 /* GroupThink.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D82CB21B1556051A00499A08 /* GroupThinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB2211556051A00499A08 /* GroupThinkTests.h */,
+				D82CB2221556051A00499A08 /* GroupThinkTests.m */,
+				D82CB21C1556051A00499A08 /* Supporting Files */,
+			);
+			path = GroupThinkTests;
+			sourceTree = "<group>";
+		};
+		D82CB21C1556051A00499A08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D82CB21D1556051A00499A08 /* GroupThinkTests-Info.plist */,
+				D82CB21E1556051A00499A08 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D82CB1ED1556051A00499A08 /* GroupThink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82CB2261556051A00499A08 /* Build configuration list for PBXNativeTarget "GroupThink" */;
+			buildPhases = (
+				D82CB1EA1556051A00499A08 /* Sources */,
+				D82CB1EB1556051A00499A08 /* Frameworks */,
+				D82CB1EC1556051A00499A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GroupThink;
+			productName = GroupThink;
+			productReference = D82CB1EE1556051A00499A08 /* GroupThink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D82CB2131556051A00499A08 /* GroupThinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82CB2291556051A00499A08 /* Build configuration list for PBXNativeTarget "GroupThinkTests" */;
+			buildPhases = (
+				D82CB20F1556051A00499A08 /* Sources */,
+				D82CB2101556051A00499A08 /* Frameworks */,
+				D82CB2111556051A00499A08 /* Resources */,
+				D82CB2121556051A00499A08 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D82CB21A1556051A00499A08 /* PBXTargetDependency */,
+			);
+			name = GroupThinkTests;
+			productName = GroupThinkTests;
+			productReference = D82CB2141556051A00499A08 /* GroupThinkTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D82CB1E51556051A00499A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = GroupThink;
+			};
+			buildConfigurationList = D82CB1E81556051A00499A08 /* Build configuration list for PBXProject "GroupThink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D82CB1E31556051A00499A08;
+			productRefGroup = D82CB1EF1556051A00499A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D82CB1ED1556051A00499A08 /* GroupThink */,
+				D82CB2131556051A00499A08 /* GroupThinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D82CB1EC1556051A00499A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */,
+				D82CB2051556051A00499A08 /* GroupThink.entitlements in Resources */,
+				D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CB2111556051A00499A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB2201556051A00499A08 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D82CB2121556051A00499A08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D82CB1EA1556051A00499A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB1FF1556051A00499A08 /* main.m in Sources */,
+				D82CB2031556051A00499A08 /* AppDelegate.m in Sources */,
+				D82CB20E1556051A00499A08 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CB20F1556051A00499A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CB2231556051A00499A08 /* GroupThinkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D82CB21A1556051A00499A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82CB1ED1556051A00499A08 /* GroupThink */;
+			targetProxy = D82CB2191556051A00499A08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D82CB1FB1556051A00499A08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82CB1FC1556051A00499A08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82CB2071556051A00499A08 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82CB20A1556051A00499A08 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D82CB21E1556051A00499A08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82CB21F1556051A00499A08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D82CB2241556051A00499A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82CB2251556051A00499A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D82CB2271556051A00499A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
+				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D82CB2281556051A00499A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
+				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D82CB22A1556051A00499A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroupThink.app/GroupThink";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
+				INFOPLIST_FILE = "GroupThinkTests/GroupThinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D82CB22B1556051A00499A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GroupThink.app/GroupThink";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
+				INFOPLIST_FILE = "GroupThinkTests/GroupThinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D82CB1E81556051A00499A08 /* Build configuration list for PBXProject "GroupThink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82CB2241556051A00499A08 /* Debug */,
+				D82CB2251556051A00499A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82CB2261556051A00499A08 /* Build configuration list for PBXNativeTarget "GroupThink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82CB2271556051A00499A08 /* Debug */,
+				D82CB2281556051A00499A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D82CB2291556051A00499A08 /* Build configuration list for PBXNativeTarget "GroupThinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82CB22A1556051A00499A08 /* Debug */,
+				D82CB22B1556051A00499A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D82CB1E51556051A00499A08 /* Project object */;
+}
