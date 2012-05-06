@@ -7,13 +7,62 @@
 //
 
 #import "AppDelegate.h"
+#import "Parse/Parse.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // ****************************************************************************
+    // Uncomment and fill in with your Parse credentials:
+    
+    // If you are using Facebook, uncomment and fill in with your Facebook App Id:
+    // [PFFacebookUtils initializeWithApplicationId:@"your_facebook_app_id"];
+    // ****************************************************************************
+    
+    [PFUser enableAutomaticUser];
+    PFACL *defaultACL = [PFACL ACL];
+    // Optionally enable public read access by default.
+    // [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
     // Override point for customization after application launch.
+    
+    //self.window.rootViewController = self.viewController;
+    //[self.window makeKeyAndVisible];
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    [PFPush storeDeviceToken:newDeviceToken];
+    [PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+	NSLog(@"application:didFailToRegisterForRemoteNotificationsWithError: %@", error);
+	if ([error code] != 3010) // 3010 is for the iPhone Simulator
+    {
+        // show some alert or otherwise handle the failure to register.
+	}
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
+- (void)subscribeFinished:(NSNumber *)result error:(NSError *)error {
+    if ([result boolValue]) {
+        NSLog(@"ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
+    } else {
+        NSLog(@"ParseStarterProject failed to subscribe to push notifications on the broadcast channel.");
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)subscribeFinished:(NSNumber *)result error:(NSError *)error;
+
 @end
