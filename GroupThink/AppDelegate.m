@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
-#import "ViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 

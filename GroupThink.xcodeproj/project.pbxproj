@@ -16,7 +16,7 @@
 		D82CB2051556051A00499A08 /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2041556051A00499A08 /* GroupThink.entitlements */; };
 		D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */; };
 		D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */; };
-		D82CB20E1556051A00499A08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB20D1556051A00499A08 /* ViewController.m */; };
+		D82CB20E1556051A00499A08 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB20D1556051A00499A08 /* LoginViewController.m */; };
 		D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB2151556051A00499A08 /* SenTestingKit.framework */; };
 		D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
@@ -30,6 +30,7 @@
 		D82CB237155605CC00499A08 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB236155605CC00499A08 /* Security.framework */; };
 		D82CB239155605D900499A08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB238155605D900499A08 /* QuartzCore.framework */; };
 		D82CB23B155605E900499A08 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB23A155605E900499A08 /* libz.1.1.3.dylib */; };
+		D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB23D1556119F00499A08 /* PollTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,8 @@
 		D82CB2041556051A00499A08 /* GroupThink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 		D82CB2071556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D82CB20A1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D82CB20C1556051A00499A08 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D82CB20D1556051A00499A08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D82CB20C1556051A00499A08 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D82CB20D1556051A00499A08 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D82CB2141556051A00499A08 /* GroupThinkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupThinkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82CB2151556051A00499A08 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D82CB21D1556051A00499A08 /* GroupThinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroupThinkTests-Info.plist"; sourceTree = "<group>"; };
@@ -72,6 +73,8 @@
 		D82CB236155605CC00499A08 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D82CB238155605D900499A08 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D82CB23A155605E900499A08 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		D82CB23C1556119F00499A08 /* PollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollTableViewController.h; sourceTree = "<group>"; };
+		D82CB23D1556119F00499A08 /* PollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +152,12 @@
 			children = (
 				D82CB2011556051A00499A08 /* AppDelegate.h */,
 				D82CB2021556051A00499A08 /* AppDelegate.m */,
+				D82CB23C1556119F00499A08 /* PollTableViewController.h */,
+				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
+				D82CB20C1556051A00499A08 /* LoginViewController.h */,
+				D82CB20D1556051A00499A08 /* LoginViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
-				D82CB20C1556051A00499A08 /* ViewController.h */,
-				D82CB20D1556051A00499A08 /* ViewController.m */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
 			path = GroupThink;
@@ -300,7 +305,8 @@
 			files = (
 				D82CB1FF1556051A00499A08 /* main.m in Sources */,
 				D82CB2031556051A00499A08 /* AppDelegate.m in Sources */,
-				D82CB20E1556051A00499A08 /* ViewController.m in Sources */,
+				D82CB20E1556051A00499A08 /* LoginViewController.m in Sources */,
+				D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
