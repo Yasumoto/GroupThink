@@ -16,7 +16,7 @@
 
 @synthesize login = _login;
 
-#define POLL_LIST_SEGUE @"pollListView"
+#define LOGGED_IN_SEGUE @"loggedInSegue"
 
 #pragma mark PFLogInViewControllerDelegate
 
@@ -24,7 +24,8 @@
     NSLog(@"%@", user);
     if (user) {
         [self dismissViewControllerAnimated:YES completion:^{
-            [self performSegueWithIdentifier:POLL_LIST_SEGUE sender:self];
+            NSLog(@"User %@ has been logged in, performing segue.", user);
+            [self performSegueWithIdentifier:LOGGED_IN_SEGUE sender:self];
         }];
     }
 }
@@ -59,7 +60,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.login = NO;
 	// Do any additional setup after loading the view, typically from a nib.
      /*PFObject *testObject = [PFObject objectWithClassName:@"PollList"];
     [testObject setObject:@"dan" forKey:@"Title"];
@@ -72,7 +72,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     if ([PFUser currentUser]) {
-        [self performSegueWithIdentifier:POLL_LIST_SEGUE sender:self];
+        [self performSegueWithIdentifier:LOGGED_IN_SEGUE sender:self];
     } else {
         PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
         logInController.delegate = self;
@@ -97,8 +97,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"pollListView"]) {
-        NSLog(@"%@", @"Preparing to segue to pollList");
+    if ([segue.identifier isEqualToString:LOGGED_IN_SEGUE]) {
+        NSLog(@"%@", @"Preparing to segue to main view");
     }
 }
 

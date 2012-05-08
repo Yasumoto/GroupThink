@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aYx-yB-tTj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lA7-ct-8Rz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller - Create Polls-->
+        <!--View Controller - Create Polls-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Polls" id="j2q-lY-oVd"/>
-                    <connections>
-                        <segue destination="jOJ-U5-5d0" kind="push" identifier="pollListView" id="RQN-8H-qmU"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="697" y="89"/>
-        </scene>
-        <!--Table View Controller - View Polls-->
-        <scene sceneID="pFg-4R-W39">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hcq-1g-niL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="RfY-LM-1km" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ngs-9v-aHw">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zJc-cB-IQY">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="View Polls" id="75P-Gb-h9o"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="774" y="809"/>
         </scene>
         <!--Navigation Controller - View-->
         <scene sceneID="AiA-zB-KB4">
@@ -60,13 +31,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RfY-LM-1km" kind="relationship" relationship="rootViewController" id="itb-uW-8Go"/>
+                        <segue destination="jOJ-U5-5d0" kind="relationship" relationship="rootViewController" id="4Ed-if-ugx"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="240" y="809"/>
         </scene>
-        <!--Poll Table View Controller-->
+        <!--Poll Table View Controller - View Polls-->
         <scene sceneID="HVA-ts-Ya6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbe-DI-Up1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -107,13 +78,13 @@
                             <outlet property="delegate" destination="jOJ-U5-5d0" id="0XM-Rg-xDd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="oqd-Tv-1NP"/>
+                    <navigationItem key="navigationItem" title="View Polls" id="oqd-Tv-1NP"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="className" value="PollList"/>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1171" y="89"/>
+            <point key="canvasLocation" x="710" y="809"/>
         </scene>
         <!--Navigation Controller - Create-->
         <scene sceneID="APH-oK-Bre">
@@ -134,12 +105,30 @@
             </objects>
             <point key="canvasLocation" x="171" y="89"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Tcq-G9-oqg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUI-J8-S67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="lA7-ct-8Rz" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8y-GR-Joi">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="aYx-yB-tTj" kind="modal" identifier="loggedInSegue" id="JQG-cB-lsa"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-691" y="640"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nFL-as-q66">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3Z-9j-6Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="aYx-yB-tTj" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" id="R9s-mY-pdU"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JOd-6i-cEt">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
