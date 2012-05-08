@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "PollTableViewController.h"
 
-@interface LoginViewController : UIViewController <PFLogInViewControllerDelegate>
+@interface LoginViewController : UIViewController <PFLogInViewControllerDelegate,PFSignUpViewControllerDelegate>
 
 @end

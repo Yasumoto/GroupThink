@@ -13,7 +13,6 @@
 		D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D82CB1FB1556051A00499A08 /* InfoPlist.strings */; };
 		D82CB1FF1556051A00499A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB1FE1556051A00499A08 /* main.m */; };
 		D82CB2031556051A00499A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB2021556051A00499A08 /* AppDelegate.m */; };
-		D82CB2051556051A00499A08 /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2041556051A00499A08 /* GroupThink.entitlements */; };
 		D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */; };
 		D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */; };
 		D82CB20E1556051A00499A08 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB20D1556051A00499A08 /* LoginViewController.m */; };
@@ -31,6 +30,7 @@
 		D82CB239155605D900499A08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB238155605D900499A08 /* QuartzCore.framework */; };
 		D82CB23B155605E900499A08 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB23A155605E900499A08 /* libz.1.1.3.dylib */; };
 		D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB23D1556119F00499A08 /* PollTableViewController.m */; };
+		D8FF92A01556F7FD0094992F /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D8FF929F1556F7FD0094992F /* GroupThink.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		D82CB2001556051A00499A08 /* GroupThink-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroupThink-Prefix.pch"; sourceTree = "<group>"; };
 		D82CB2011556051A00499A08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D82CB2021556051A00499A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D82CB2041556051A00499A08 /* GroupThink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 		D82CB2071556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D82CB20A1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D82CB20C1556051A00499A08 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		D82CB23A155605E900499A08 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		D82CB23C1556119F00499A08 /* PollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollTableViewController.h; sourceTree = "<group>"; };
 		D82CB23D1556119F00499A08 /* PollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollTableViewController.m; sourceTree = "<group>"; };
+		D8FF929F1556F7FD0094992F /* GroupThink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 				D82CB1FB1556051A00499A08 /* InfoPlist.strings */,
 				D82CB1FE1556051A00499A08 /* main.m */,
 				D82CB2001556051A00499A08 /* GroupThink-Prefix.pch */,
-				D82CB2041556051A00499A08 /* GroupThink.entitlements */,
+				D8FF929F1556F7FD0094992F /* GroupThink.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */,
-				D82CB2051556051A00499A08 /* GroupThink.entitlements in Resources */,
 				D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */,
+				D8FF92A01556F7FD0094992F /* GroupThink.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +416,6 @@
 		D82CB2271556051A00499A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -432,7 +431,6 @@
 		D82CB2281556051A00499A08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -498,6 +496,7 @@
 				D82CB2281556051A00499A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D82CB2291556051A00499A08 /* Build configuration list for PBXNativeTarget "GroupThinkTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +505,7 @@
 				D82CB22B1556051A00499A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

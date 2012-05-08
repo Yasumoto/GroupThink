@@ -12,11 +12,14 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // ****************************************************************************
     // Uncomment and fill in with your Parse credentials:
-    
+    [Parse setApplicationId:@"msz0pSBTRg6TvKklFBfVzJna8gpw8aNMSRQGMCxv" 
+                  clientKey:@"a6gRK1R3qDMbSyD32blZtKZWTPAmGVFq2CxsAH5m"];
     // If you are using Facebook, uncomment and fill in with your Facebook App Id:
     // [PFFacebookUtils initializeWithApplicationId:@"your_facebook_app_id"];
     // ****************************************************************************
