@@ -28,30 +28,6 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithClassName:@"Foo"];
-    self = [super initWithCoder:aDecoder];
-    if (self) {        
-        // The className to query on
-        self.className = @"PollList";
-        
-        // The key of the PFObject to display in the label of the default cell style
-        self.keyToDisplay = @"Title";
-        
-        // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = YES;
-        
-        // Whether the built-in pagination is enabled
-        self.paginationEnabled = YES;
-        
-        // The number of objects to show per page
-        self.objectsPerPage = 25;
-    }
-    NSLog(@"The className of the PFTableView (when initWithCoder) is: %@", self.className);
-    return self;
-}
-
 - (void) viewDidAppear:(BOOL)animated {
 }
 
