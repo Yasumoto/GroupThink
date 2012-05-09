@@ -7,6 +7,7 @@
 //
 
 #import "PollTableViewController.h"
+#import "PollDetailViewController.h"
 
 @interface PollTableViewController ()
 
@@ -61,6 +62,16 @@
     
     return query;
 }*/
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewPoll"]) {
+        if ([segue.destinationViewController isKindOfClass:[PollDetailViewController class]]) {
+            PollDetailViewController *pollController = segue.destinationViewController;
+            int indexOfPoll = [self.tableView indexPathForCell:sender].row;
+            pollController.poll = [self.objects objectAtIndex:indexOfPoll];
+        }
+    }
+}
 
 #pragma mark PFQueryTableViewController
 

@@ -133,7 +133,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Kzb-br-plv" kind="push" id="xac-Wn-MVK"/>
+                                    <segue destination="Kzb-br-plv" kind="push" identifier="viewPoll" id="xac-Wn-MVK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

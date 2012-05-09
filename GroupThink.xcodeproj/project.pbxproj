@@ -31,6 +31,7 @@
 		D82CB23B155605E900499A08 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB23A155605E900499A08 /* libz.1.1.3.dylib */; };
 		D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB23D1556119F00499A08 /* PollTableViewController.m */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
+		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
 		D8FF92A01556F7FD0094992F /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D8FF929F1556F7FD0094992F /* GroupThink.entitlements */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		D82CB23D1556119F00499A08 /* PollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollTableViewController.m; sourceTree = "<group>"; };
 		D863DF591559F63600FA9934 /* CreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewController.h; sourceTree = "<group>"; };
 		D863DF5A1559F63600FA9934 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
+		D88D7F90155A1843002C6C36 /* PollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollDetailViewController.h; sourceTree = "<group>"; };
+		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
 		D8FF929F1556F7FD0094992F /* GroupThink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +165,8 @@
 				D863DF591559F63600FA9934 /* CreatePollViewController.h */,
 				D863DF5A1559F63600FA9934 /* CreatePollViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
+				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
+				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
@@ -313,6 +318,7 @@
 				D82CB20E1556051A00499A08 /* LoginViewController.m in Sources */,
 				D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */,
 				D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */,
+				D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
