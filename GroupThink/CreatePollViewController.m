@@ -50,16 +50,20 @@
 }
 
 - (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    PFQuery *query = [PFQuery queryForUser];
     [query whereKey:@"email" equalTo:emailAddress];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error && objects.count > 0) {
             PFUser *user = [objects objectAtIndex:0];
             if (user) {
-                PFACL *pollACL = [PFACL ACL];
+                PFACL *pollACL = [pollObject ACL];
                 [pollACL setReadAccess:YES forUser:user];
                 [pollObject setACL:pollACL];
-                [pollObject saveEventually];
+                [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (succeeded) {
+                        NSLog(@"The poll has been saved!");
+                    }
+                }];
             }
         }
     }];
