@@ -18,8 +18,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // This table displays a user's polls
-        self.className = @"PollList";
-        self.keyToDisplay = @"Title";
+        self.className = @"Poll";
+        self.keyToDisplay = @"question";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = NO;
         self.objectsPerPage = 25;

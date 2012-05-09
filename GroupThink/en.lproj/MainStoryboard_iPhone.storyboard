@@ -108,11 +108,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Poll List Cells" textLabel="OQO-Fw-xeD" detailTextLabel="zCm-rJ-zIO" style="IBUITableViewCellStyleSubtitle" id="8BY-T4-BKe" customClass="PollListCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Poll List Cells" textLabel="OQO-Fw-xeD" detailTextLabel="zCm-rJ-zIO" style="IBUITableViewCellStyleSubtitle" id="8BY-T4-BKe" customClass="PollListCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OQO-Fw-xeD">
@@ -132,6 +132,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="Kzb-br-plv" kind="push" id="xac-Wn-MVK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -141,11 +144,27 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="View Polls" id="oqd-Tv-1NP"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="className" value="PollList"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="className" value="Poll"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyToDisplay" value="question"/>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="710" y="809"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U1W-Uh-4Of">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ks-n3-1PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Kzb-br-plv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TZj-V7-xzm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7wt-Zz-1ye"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1097" y="809"/>
         </scene>
         <!--Navigation Controller - Create-->
         <scene sceneID="APH-oK-Bre">
