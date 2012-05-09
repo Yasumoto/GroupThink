@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *memberTwoLabel;
 @property (weak, nonatomic) IBOutlet UITextView *answers;
 - (IBAction)addAnswer:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *answer;
 
 @end

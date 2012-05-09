@@ -197,18 +197,25 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answers" id="feJ-bw-5Uj">
-                                <rect key="frame" x="40" y="120" width="240" height="172"/>
+                                <rect key="frame" x="20" y="126" width="260" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="EgD-3d-YuZ">
+                                <rect key="frame" x="20" y="271" width="260" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7wt-Zz-1ye"/>
                     <connections>
                         <outlet property="QuestionTextView" destination="n4y-Xl-h1H" id="BIQ-Ta-5TG"/>
+                        <outlet property="answer" destination="EgD-3d-YuZ" id="RDP-1H-Yj2"/>
                         <outlet property="answers" destination="feJ-bw-5Uj" id="f0F-Ui-pA4"/>
                         <outlet property="memberOneLabel" destination="xmR-7q-kB7" id="ogL-pX-PJy"/>
                         <outlet property="memberTwoLabel" destination="7kB-lH-7Oq" id="Khj-Of-dqU"/>
@@ -295,6 +302,7 @@
             <relationships>
                 <relationship kind="action" name="addAnswer:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="QuestionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="answer" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="answers" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="memberOneLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="memberTwoLabel" candidateClass="UILabel"/>

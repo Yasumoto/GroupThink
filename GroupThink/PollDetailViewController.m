@@ -13,6 +13,7 @@
 @end
 
 @implementation PollDetailViewController
+@synthesize answer = _answer;
 @synthesize poll = _poll;
 @synthesize QuestionTextView = _QuestionTextView;
 @synthesize memberOneLabel = _memberOneLabel;
@@ -28,6 +29,13 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    self.QuestionTextView.text = [self.poll objectForKey:@"question"];
+    self.memberOneLabel.text = [self.poll objectForKey:@"memberOne"];
+    self.memberTwoLabel.text = [self.poll objectForKey:@"memberTwo"];
+    self.answers.text = [self.poll objectForKey:@"answers"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,6 +48,7 @@
     [self setMemberOneLabel:nil];
     [self setMemberTwoLabel:nil];
     [self setAnswers:nil];
+    [self setAnswer:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
