@@ -46,14 +46,15 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)createPollButtonPressed:(id)sender {
-
-    /*PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
-     [testObject setObject:@"dan" forKey:@"Title"];
-     [testObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-     if (succeeded) {
-     NSLog(@"Saved object succeeded!");
-     }
-     }];*/
+- (IBAction)createPollButtonPressed:(UIButton *)sender {
+    PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
+    [pollObject setObject:self.questionText.text forKey:@"question"];
+    [pollObject setObject:self.memberOne.text forKey:@"memberOne"];
+    [pollObject setObject:self.memberTwo.text forKey:@"memberTwo"];
+    [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    if (succeeded) {
+     NSLog(@"Saved poll succeeded!");
+    }
+    }];
 }
 @end
