@@ -64,7 +64,8 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    if ([PFUser currentUser]) {
+    if ([PFUser currentUser].username) {
+        NSLog(@"Logged in user is: %@", [PFUser currentUser].username);
         [self performSegueWithIdentifier:LOGGED_IN_SEGUE sender:self];
     } else {
         PFLogInViewController *logInController = [[PFLogInViewController alloc] init];

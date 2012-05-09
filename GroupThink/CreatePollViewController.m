@@ -49,6 +49,22 @@
     return YES;
 }
 
+- (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"email" equalTo:emailAddress];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error && objects.count > 0) {
+            PFUser *user = [objects objectAtIndex:0];
+            if (user) {
+                PFACL *pollACL = [PFACL ACL];
+                [pollACL setReadAccess:YES forUser:user];
+                [pollObject setACL:pollACL];
+                [pollObject saveEventually];
+            }
+        }
+    }];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -59,6 +75,8 @@
     [pollObject setObject:self.questionField.text forKey:@"question"];
     [pollObject setObject:self.memberOne.text forKey:@"memberOne"];
     [pollObject setObject:self.memberTwo.text forKey:@"memberTwo"];
+    [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberOne.text];
+    [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberTwo.text];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
     if (succeeded) {
      NSLog(@"Saved poll succeeded!");
