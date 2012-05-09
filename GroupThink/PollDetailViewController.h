@@ -11,4 +11,10 @@
 
 @interface PollDetailViewController : UIViewController
 @property (strong, nonatomic) PFObject *poll;
+@property (weak, nonatomic) IBOutlet UITextView *QuestionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *memberOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *memberTwoLabel;
+@property (weak, nonatomic) IBOutlet UITextView *answers;
+- (IBAction)addAnswer:(UIButton *)sender;
+
 @end

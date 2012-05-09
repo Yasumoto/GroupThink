@@ -151,11 +151,11 @@
             </objects>
             <point key="canvasLocation" x="710" y="809"/>
         </scene>
-        <!--View Controller-->
+        <!--Poll Detail View Controller-->
         <scene sceneID="U1W-Uh-4Of">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ks-n3-1PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Kzb-br-plv" sceneMemberID="viewController">
+                <viewController id="Kzb-br-plv" customClass="PollDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TZj-V7-xzm">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,6 +192,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAnswer:" destination="Kzb-br-plv" eventType="touchUpInside" id="CwR-Ll-Wx3"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answers" id="feJ-bw-5Uj">
                                 <rect key="frame" x="40" y="120" width="240" height="172"/>
@@ -204,6 +207,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7wt-Zz-1ye"/>
+                    <connections>
+                        <outlet property="QuestionTextView" destination="n4y-Xl-h1H" id="BIQ-Ta-5TG"/>
+                        <outlet property="answers" destination="feJ-bw-5Uj" id="f0F-Ui-pA4"/>
+                        <outlet property="memberOneLabel" destination="xmR-7q-kB7" id="ogL-pX-PJy"/>
+                        <outlet property="memberTwoLabel" destination="7kB-lH-7Oq" id="Khj-Of-dqU"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1097" y="809"/>
@@ -280,6 +289,16 @@
         </class>
         <class className="PFQueryTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
+        </class>
+        <class className="PollDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PollDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addAnswer:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="QuestionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="answers" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="memberOneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="memberTwoLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="PollTableViewController" superclassName="PFQueryTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PollTableViewController.h"/>

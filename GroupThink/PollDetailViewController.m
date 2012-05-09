@@ -14,6 +14,10 @@
 
 @implementation PollDetailViewController
 @synthesize poll = _poll;
+@synthesize QuestionTextView = _QuestionTextView;
+@synthesize memberOneLabel = _memberOneLabel;
+@synthesize memberTwoLabel = _memberTwoLabel;
+@synthesize answers = _answers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +36,10 @@
 
 - (void)viewDidUnload
 {
+    [self setQuestionTextView:nil];
+    [self setMemberOneLabel:nil];
+    [self setMemberTwoLabel:nil];
+    [self setAnswers:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -41,4 +49,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)addAnswer:(UIButton *)sender {
+}
 @end
