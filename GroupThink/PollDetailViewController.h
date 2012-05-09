@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface PollDetailViewController : UIViewController
+@interface PollDetailViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) PFObject *poll;
 @property (weak, nonatomic) IBOutlet UITextView *QuestionTextView;
 @property (weak, nonatomic) IBOutlet UILabel *memberOneLabel;

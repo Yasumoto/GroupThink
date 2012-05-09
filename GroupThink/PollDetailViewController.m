@@ -30,16 +30,14 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.QuestionTextView.text = [self.poll objectForKey:@"question"];
-    self.memberOneLabel.text = [self.poll objectForKey:@"memberOne"];
-    self.memberTwoLabel.text = [self.poll objectForKey:@"memberTwo"];
-    self.answers.text = [self.poll objectForKey:@"answers"];
+    [self updateView];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.answer.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -53,11 +51,35 @@
     // Release any retained subviews of the main view.
 }
 
+- (void) updateView {
+    self.QuestionTextView.text = [self.poll objectForKey:@"question"];
+    self.memberOneLabel.text = [self.poll objectForKey:@"memberOne"];
+    self.memberTwoLabel.text = [self.poll objectForKey:@"memberTwo"];
+    self.answers.text = [self.poll objectForKey:@"answers"];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)addAnswer:(UIButton *)sender {
+    NSString *answer = [self.answers.text stringByAppendingString:@"\n"];
+    answer = [answer stringByAppendingString:self.answer.text];
+    answer = [answer stringByAppendingFormat:@" - %@", [PFUser currentUser].username];
+    [self.poll setObject:answer forKey:@"answers"];
+    [self.poll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self updateView];
+        }
+    }];
 }
+
+#pragma mark UITextFieldDelegate
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end
