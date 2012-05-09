@@ -62,26 +62,18 @@
     return query;
 }*/
 
-#pragma mark UITableViewDataSource
+#pragma mark PFQueryTableViewController
 
-/*- (UITableViewCell *) tableView:(UITableView *)tableView
+- (UITableViewCell *) tableView:(UITableView *)tableView
           cellForRowAtIndexPath:(NSIndexPath *)indexPath
                          object:(PFObject *)object {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Poll List Cells"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Poll List Cells"];
     }
-    cell.textLabel.text = [[PFUser currentUser] username];
-    cell.detailTextLabel.text = @"Is a baoss";
+    cell.textLabel.text = [object objectForKey:@"question"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", [object objectForKey:@"memberOne"], [object objectForKey:@"memberTwo"]];
     return cell;
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}*/
 
 @end
