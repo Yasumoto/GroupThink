@@ -61,13 +61,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-     /*PFObject *testObject = [PFObject objectWithClassName:@"PollList"];
-    [testObject setObject:@"dan" forKey:@"Title"];
-    [testObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Saved object succeeded!");
-        }
-    }];*/
 }
 
 - (void) viewDidAppear:(BOOL)animated {

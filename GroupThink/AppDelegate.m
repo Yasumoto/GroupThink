@@ -32,12 +32,9 @@
     
     // Override point for customization after application launch.
     
-    //self.window.rootViewController = self.viewController;
-    //[self.window makeKeyAndVisible];
-    
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+    /*[application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+     UIRemoteNotificationTypeSound];*/
     return YES;
 }
 
