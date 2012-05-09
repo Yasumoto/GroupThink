@@ -76,7 +76,7 @@
                     <connections>
                         <outlet property="memberOne" destination="X8Y-JS-0JX" id="CdG-Zr-KJK"/>
                         <outlet property="memberTwo" destination="TB3-vC-rA5" id="3xO-c5-Isd"/>
-                        <outlet property="questionText" destination="HCj-RL-gbJ" id="ucH-1e-Auf"/>
+                        <outlet property="questionField" destination="HCj-RL-gbJ" id="WX9-J6-ivt"/>
                     </connections>
                 </viewController>
             </objects>
@@ -236,7 +236,7 @@
                 <relationship kind="action" name="createPollButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="memberOne" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="memberTwo" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="questionText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="questionField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="LoginViewController" superclassName="UIViewController">

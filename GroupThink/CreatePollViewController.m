@@ -13,7 +13,7 @@
 @end
 
 @implementation CreatePollViewController
-@synthesize questionText;
+@synthesize questionField;
 @synthesize memberOne;
 @synthesize memberTwo;
 
@@ -30,15 +30,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    questionField.delegate = self;
+    memberOne.delegate = self;
+    memberTwo.delegate = self;
 }
 
 - (void)viewDidUnload
 {
-    [self setQuestionText:nil];
+    [self setQuestionField:nil];
     [self setMemberOne:nil];
     [self setMemberTwo:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -48,7 +56,7 @@
 
 - (IBAction)createPollButtonPressed:(UIButton *)sender {
     PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
-    [pollObject setObject:self.questionText.text forKey:@"question"];
+    [pollObject setObject:self.questionField.text forKey:@"question"];
     [pollObject setObject:self.memberOne.text forKey:@"memberOne"];
     [pollObject setObject:self.memberTwo.text forKey:@"memberTwo"];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
