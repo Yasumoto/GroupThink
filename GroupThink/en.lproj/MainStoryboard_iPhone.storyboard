@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lA7-ct-8Rz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2488" systemVersion="12A193i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lA7-ct-8Rz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1468"/>
     </dependencies>
     <scenes>
         <!--Create Poll View Controller - Create Polls-->
@@ -133,7 +133,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Kzb-br-plv" kind="push" identifier="viewPoll" id="xac-Wn-MVK"/>
+                                    <segue destination="Kzb-br-plv" identifier="viewPoll" kind="push" id="xac-Wn-MVK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -254,7 +254,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="aYx-yB-tTj" kind="modal" identifier="loggedInSegue" id="JQG-cB-lsa"/>
+                        <segue destination="aYx-yB-tTj" identifier="loggedInSegue" kind="modal" id="JQG-cB-lsa"/>
                     </connections>
                 </viewController>
             </objects>

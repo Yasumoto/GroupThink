@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D804C381155B7E4000AAF415 /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D804C380155B7E4000AAF415 /* GroupThink.entitlements */; };
+		D804C388155B884600AAF415 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D804C387155B884600AAF415 /* Icon.png */; };
+		D804C38A155B88AC00AAF415 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D804C389155B88AC00AAF415 /* Icon-72.png */; };
 		D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
@@ -32,7 +35,6 @@
 		D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB23D1556119F00499A08 /* PollTableViewController.m */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
-		D8FF92A01556F7FD0094992F /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D8FF929F1556F7FD0094992F /* GroupThink.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D804C380155B7E4000AAF415 /* GroupThink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
+		D804C387155B884600AAF415 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D804C389155B88AC00AAF415 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		D82CB1EE1556051A00499A08 /* GroupThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82CB1F21556051A00499A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D82CB1F41556051A00499A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +85,6 @@
 		D863DF5A1559F63600FA9934 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
 		D88D7F90155A1843002C6C36 /* PollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollDetailViewController.h; sourceTree = "<group>"; };
 		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
-		D8FF929F1556F7FD0094992F /* GroupThink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,15 +162,15 @@
 			children = (
 				D82CB2011556051A00499A08 /* AppDelegate.h */,
 				D82CB2021556051A00499A08 /* AppDelegate.m */,
-				D82CB23C1556119F00499A08 /* PollTableViewController.h */,
-				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
 				D82CB20C1556051A00499A08 /* LoginViewController.h */,
 				D82CB20D1556051A00499A08 /* LoginViewController.m */,
 				D863DF591559F63600FA9934 /* CreatePollViewController.h */,
 				D863DF5A1559F63600FA9934 /* CreatePollViewController.m */,
-				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
+				D82CB23C1556119F00499A08 /* PollTableViewController.h */,
+				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
 				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
 				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
+				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
@@ -176,11 +180,13 @@
 		D82CB1F91556051A00499A08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D804C389155B88AC00AAF415 /* Icon-72.png */,
+				D804C387155B884600AAF415 /* Icon.png */,
 				D82CB1FA1556051A00499A08 /* GroupThink-Info.plist */,
 				D82CB1FB1556051A00499A08 /* InfoPlist.strings */,
 				D82CB1FE1556051A00499A08 /* main.m */,
 				D82CB2001556051A00499A08 /* GroupThink-Prefix.pch */,
-				D8FF929F1556F7FD0094992F /* GroupThink.entitlements */,
+				D804C380155B7E4000AAF415 /* GroupThink.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 				D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */,
 				D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */,
-				D8FF92A01556F7FD0094992F /* GroupThink.entitlements in Resources */,
+				D804C381155B7E4000AAF415 /* GroupThink.entitlements in Resources */,
+				D804C388155B884600AAF415 /* Icon.png in Resources */,
+				D804C38A155B88AC00AAF415 /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +391,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -397,7 +406,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Users/joe/Desktop;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = GroupThink;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +422,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -417,8 +430,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Users/joe/Desktop;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = GroupThink;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -428,6 +444,9 @@
 		D82CB2271556051A00499A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Smith";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Smith";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -436,6 +455,8 @@
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
 				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -443,6 +464,9 @@
 		D82CB2281556051A00499A08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GroupThink/GroupThink.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Joseph Smith";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Joseph Smith";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -451,6 +475,8 @@
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
 				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
