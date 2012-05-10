@@ -71,6 +71,12 @@
         PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
         logInController.delegate = self;
         logInController.signUpController.delegate = self;
+        logInController.fields = PFLogInFieldsUsernameAndPassword 
+        | PFLogInFieldsLogInButton
+        | PFLogInFieldsSignUpButton 
+        | PFLogInFieldsPasswordForgotten 
+        | PFLogInFieldsDismissButton
+        | PFLogInFieldsFacebook;
         [self presentViewController:logInController animated:YES completion:NULL];
     }
 }
