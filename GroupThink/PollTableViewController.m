@@ -80,7 +80,8 @@
                          object:(PFObject *)object {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Poll List Cells"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Poll List Cells"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:@"Poll List Cells"];
     }
     cell.textLabel.text = [object objectForKey:@"question"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", [object objectForKey:@"memberOne"], [object objectForKey:@"memberTwo"]];

@@ -21,7 +21,7 @@
     [Parse setApplicationId:@"msz0pSBTRg6TvKklFBfVzJna8gpw8aNMSRQGMCxv" 
                   clientKey:@"a6gRK1R3qDMbSyD32blZtKZWTPAmGVFq2CxsAH5m"];
     // If you are using Facebook, uncomment and fill in with your Facebook App Id:
-    // [PFFacebookUtils initializeWithApplicationId:@"your_facebook_app_id"];
+    [PFFacebookUtils initializeWithApplicationId:@"311355818940970"];
     // ****************************************************************************
     
     [PFUser enableAutomaticUser];
@@ -36,6 +36,15 @@
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];*/
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
