@@ -26,6 +26,10 @@
     // ****************************************************************************
     
     [TestFlight takeOff:@"aac013542c07cae2bc366df9f05be55d_ODk3MTYyMDEyLTA1LTEyIDE2OjQ1OjAzLjQ3NDA0Nw"];
+#define TESTING 1
+#ifdef TESTING
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+#endif
     
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
