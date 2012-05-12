@@ -33,6 +33,9 @@
 		D82CB239155605D900499A08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB238155605D900499A08 /* QuartzCore.framework */; };
 		D82CB23B155605E900499A08 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB23A155605E900499A08 /* libz.1.1.3.dylib */; };
 		D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB23D1556119F00499A08 /* PollTableViewController.m */; };
+		D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8374EE3155F06C200BC1617 /* libTestFlight.a */; };
+		D8374EE8155F06C200BC1617 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE4155F06C200BC1617 /* README.txt */; };
+		D8374EE9155F06C200BC1617 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE5155F06C200BC1617 /* release_notes.txt */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -81,6 +84,10 @@
 		D82CB23A155605E900499A08 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		D82CB23C1556119F00499A08 /* PollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollTableViewController.h; sourceTree = "<group>"; };
 		D82CB23D1556119F00499A08 /* PollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollTableViewController.m; sourceTree = "<group>"; };
+		D8374EE3155F06C200BC1617 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		D8374EE4155F06C200BC1617 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D8374EE5155F06C200BC1617 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		D8374EE6155F06C200BC1617 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D863DF591559F63600FA9934 /* CreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewController.h; sourceTree = "<group>"; };
 		D863DF5A1559F63600FA9934 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
 		D88D7F90155A1843002C6C36 /* PollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollDetailViewController.h; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 				D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */,
 				D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */,
 				D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */,
+				D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +149,7 @@
 		D82CB1F11556051A00499A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8374EE2155F06C200BC1617 /* TestFlightSDK1 */,
 				D82CB23A155605E900499A08 /* libz.1.1.3.dylib */,
 				D82CB238155605D900499A08 /* QuartzCore.framework */,
 				D82CB236155605CC00499A08 /* Security.framework */,
@@ -208,6 +217,17 @@
 				D82CB21E1556051A00499A08 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8374EE2155F06C200BC1617 /* TestFlightSDK1 */ = {
+			isa = PBXGroup;
+			children = (
+				D8374EE3155F06C200BC1617 /* libTestFlight.a */,
+				D8374EE4155F06C200BC1617 /* README.txt */,
+				D8374EE5155F06C200BC1617 /* release_notes.txt */,
+				D8374EE6155F06C200BC1617 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +307,8 @@
 				D804C381155B7E4000AAF415 /* GroupThink.entitlements in Resources */,
 				D804C388155B884600AAF415 /* Icon.png in Resources */,
 				D804C38A155B88AC00AAF415 /* Icon-72.png in Resources */,
+				D8374EE8155F06C200BC1617 /* README.txt in Resources */,
+				D8374EE9155F06C200BC1617 /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +476,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
 				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -474,6 +500,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
 				INFOPLIST_FILE = "GroupThink/GroupThink-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F1A15A34-D227-41F3-8D17-B0D268D4574A";
