@@ -82,9 +82,9 @@
     [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberOne.text];
     [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberTwo.text];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-    if (succeeded) {
-     NSLog(@"Saved poll succeeded!");
-    }
+        if (succeeded) {
+            NSLog(@"Saved poll succeeded!");
+        }
     }];
 }
 @end
