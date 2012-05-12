@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
 #import "LoginViewController.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,8 @@
     // If you are using Facebook, uncomment and fill in with your Facebook App Id:
     [PFFacebookUtils initializeWithApplicationId:@"311355818940970"];
     // ****************************************************************************
+    
+    [TestFlight takeOff:@"aac013542c07cae2bc366df9f05be55d_ODk3MTYyMDEyLTA1LTEyIDE2OjQ1OjAzLjQ3NDA0Nw"];
     
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
