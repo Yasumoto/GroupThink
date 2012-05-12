@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface CreatePollViewController : UIViewController <UITextFieldDelegate>
+@interface CreatePollViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
-@property (weak, nonatomic) IBOutlet UITextField *memberOne;
-@property (weak, nonatomic) IBOutlet UITextField *memberTwo;
+@property (weak, nonatomic) IBOutlet UITextView *members;
 - (IBAction) createPollButtonPressed:(UIButton *)sender;
 @end

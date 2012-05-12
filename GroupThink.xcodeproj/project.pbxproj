@@ -38,6 +38,9 @@
 		D8374EE9155F06C200BC1617 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE5155F06C200BC1617 /* release_notes.txt */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
+		D895D4C9155F11B800F7924D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C7155F11B800F7924D /* AddressBook.framework */; };
+		D895D4CA155F11B800F7924D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C8155F11B800F7924D /* AddressBookUI.framework */; };
+		D895D4CE155F17C600F7924D /* JSEmailSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D895D4CD155F17C600F7924D /* JSEmailSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,10 @@
 		D863DF5A1559F63600FA9934 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
 		D88D7F90155A1843002C6C36 /* PollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollDetailViewController.h; sourceTree = "<group>"; };
 		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
+		D895D4C7155F11B800F7924D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D895D4C8155F11B800F7924D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D895D4CC155F17C600F7924D /* JSEmailSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEmailSelectViewController.h; sourceTree = "<group>"; };
+		D895D4CD155F17C600F7924D /* JSEmailSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEmailSelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D895D4C9155F11B800F7924D /* AddressBook.framework in Frameworks */,
+				D895D4CA155F11B800F7924D /* AddressBookUI.framework in Frameworks */,
 				D82CB23B155605E900499A08 /* libz.1.1.3.dylib in Frameworks */,
 				D82CB239155605D900499A08 /* QuartzCore.framework in Frameworks */,
 				D82CB237155605CC00499A08 /* Security.framework in Frameworks */,
@@ -130,6 +139,8 @@
 		D82CB1E31556051A00499A08 = {
 			isa = PBXGroup;
 			children = (
+				D895D4C7155F11B800F7924D /* AddressBook.framework */,
+				D895D4C8155F11B800F7924D /* AddressBookUI.framework */,
 				D82CB1F81556051A00499A08 /* GroupThink */,
 				D82CB21B1556051A00499A08 /* GroupThinkTests */,
 				D82CB1F11556051A00499A08 /* Frameworks */,
@@ -179,6 +190,8 @@
 				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
 				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
 				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
+				D895D4CC155F17C600F7924D /* JSEmailSelectViewController.h */,
+				D895D4CD155F17C600F7924D /* JSEmailSelectViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
@@ -349,6 +362,7 @@
 				D82CB23E1556119F00499A08 /* PollTableViewController.m in Sources */,
 				D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */,
 				D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */,
+				D895D4CE155F17C600F7924D /* JSEmailSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

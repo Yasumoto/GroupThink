@@ -14,8 +14,7 @@
 
 @implementation CreatePollViewController
 @synthesize questionField;
-@synthesize memberOne;
-@synthesize memberTwo;
+@synthesize members;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,15 +30,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     questionField.delegate = self;
-    memberOne.delegate = self;
-    memberTwo.delegate = self;
+    members.delegate = self;
 }
 
 - (void)viewDidUnload
 {
     [self setQuestionField:nil];
-    [self setMemberOne:nil];
-    [self setMemberTwo:nil];
+    [self setMembers:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -77,10 +74,6 @@
 - (IBAction)createPollButtonPressed:(UIButton *)sender {
     PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
     [pollObject setObject:self.questionField.text forKey:@"question"];
-    [pollObject setObject:self.memberOne.text forKey:@"memberOne"];
-    [pollObject setObject:self.memberTwo.text forKey:@"memberTwo"];
-    [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberOne.text];
-    [self addWriteAccessOnPoll:pollObject ForEmailAddress:memberTwo.text];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Saved poll succeeded!");

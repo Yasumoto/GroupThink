@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z8h-ZH-z6C">
-                                <rect key="frame" x="124" y="302" width="73" height="37"/>
+                                <rect key="frame" x="227" y="4" width="73" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Create">
@@ -43,27 +43,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Member 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mqp-ki-6lu">
-                                <rect key="frame" x="20" y="199" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="gkoberger@gmail.com" borderStyle="roundedRect" minimumFontSize="17" id="TB3-vC-rA5">
-                                <rect key="frame" x="20" y="228" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yasumoto7@gmail.com" borderStyle="roundedRect" minimumFontSize="17" id="X8Y-JS-0JX">
-                                <rect key="frame" x="20" y="147" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Member 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tmH-X7-AWf">
-                                <rect key="frame" x="20" y="118" width="78" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Members" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tmH-X7-AWf">
+                                <rect key="frame" x="20" y="88" width="78" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,8 +55,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create Polls" id="j2q-lY-oVd"/>
                     <connections>
-                        <outlet property="memberOne" destination="X8Y-JS-0JX" id="CdG-Zr-KJK"/>
-                        <outlet property="memberTwo" destination="TB3-vC-rA5" id="3xO-c5-Isd"/>
                         <outlet property="questionField" destination="HCj-RL-gbJ" id="WX9-J6-ivt"/>
                     </connections>
                 </viewController>
@@ -286,8 +265,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CreatePollViewController.h"/>
             <relationships>
                 <relationship kind="action" name="createPollButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="memberOne" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="memberTwo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="members" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="questionField" candidateClass="UITextField"/>
             </relationships>
         </class>
