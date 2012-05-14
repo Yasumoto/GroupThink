@@ -9,12 +9,20 @@
 #import "CreatePollViewController.h"
 
 @interface CreatePollViewController ()
-
+@property (nonatomic, strong) ButtonPeoplePicker *peoplePicker;
 @end
 
 @implementation CreatePollViewController
-@synthesize questionField;
-@synthesize members;
+@synthesize questionField = questionField;
+@synthesize namesLabel;
+@synthesize peoplePicker = _peoplePicker;
+
+static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
+
+- (ButtonPeoplePicker *) peoplePicker {
+    if (!_peoplePicker) self.peoplePicker = [[ButtonPeoplePicker alloc] init];
+    return _peoplePicker;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,14 +37,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    questionField.delegate = self;
-    members.delegate = self;
+    self.questionField.delegate = self;
 }
 
 - (void)viewDidUnload
 {
-    [self setQuestionField:nil];
-    [self setMembers:nil];
+    self.questionField = nil;
+    [self setNamesLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -44,6 +51,12 @@
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:kSegueIdentifier]) {
+        [segue.destinationViewController setDelegate:self];
+    }
 }
 
 - (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
@@ -54,11 +67,12 @@
             PFUser *user = [objects objectAtIndex:0];
             if (user) {
                 PFACL *pollACL = [pollObject ACL];
+                [pollACL setReadAccess:YES forUser:user];
                 [pollACL setWriteAccess:YES forUser:user];
                 [pollObject setACL:pollACL];
                 [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
-                        NSLog(@"The poll has been saved!");
+                        NSLog(@"The poll has the correct ACLs!");
                     }
                 }];
             }
@@ -79,5 +93,33 @@
             NSLog(@"Saved poll succeeded!");
         }
     }];
+}
+
+#pragma mark - Update Person info
+
+- (void)updatePersonInfo:(NSArray *)group
+{
+	ABAddressBookRef addressBook = ABAddressBookCreate();
+	NSMutableString *namesString = [NSMutableString string];	
+	for (int i = 0; i < group.count; i++) {		
+		NSNumber *personID = (NSNumber *)[group objectAtIndex:i];
+		ABRecordID abRecordID = (ABRecordID)[personID intValue];
+		ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
+		NSString *name = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
+		if (i < (group.count - 1)) {
+			[namesString appendString:[NSString stringWithFormat:@"%@, ", name]];
+		}
+		else {
+			[namesString appendString:[NSString stringWithFormat:@"%@", name]];
+		}
+	}    
+	[namesLabel setText:namesString];
+	CFRelease(addressBook);
+}
+
+- (void)buttonPeoplePickerDidFinish:(ButtonPeoplePicker *)controller {
+    NSLog(@"%@", controller.group);
+    [self updatePersonInfo:controller.group];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

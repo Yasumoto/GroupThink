@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2488" systemVersion="12A193i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lA7-ct-8Rz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lA7-ct-8Rz">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1468"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--Create Poll View Controller - Create Polls-->
@@ -50,11 +50,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="djE-G8-MEl">
+                                <rect key="frame" x="228" y="88" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cff-e5-sHa" kind="modal" identifier="showButtonPeoplePicker" id="1sa-Er-fX0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cfU-2Y-ia7">
+                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Polls" id="j2q-lY-oVd"/>
                     <connections>
+                        <outlet property="namesLabel" destination="cfU-2Y-ia7" id="Mod-gs-Eo6"/>
                         <outlet property="questionField" destination="HCj-RL-gbJ" id="WX9-J6-ivt"/>
                     </connections>
                 </viewController>
@@ -112,7 +135,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Kzb-br-plv" identifier="viewPoll" kind="push" id="xac-Wn-MVK"/>
+                                    <segue destination="Kzb-br-plv" kind="push" identifier="viewPoll" id="xac-Wn-MVK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -233,7 +256,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="aYx-yB-tTj" identifier="loggedInSegue" kind="modal" id="JQG-cB-lsa"/>
+                        <segue destination="aYx-yB-tTj" kind="modal" identifier="loggedInSegue" id="JQG-cB-lsa"/>
                     </connections>
                 </viewController>
             </objects>
@@ -259,13 +282,214 @@
             </objects>
             <point key="canvasLocation" x="-220" y="640"/>
         </scene>
+        <!--Button People Picker-->
+        <scene sceneID="49q-lJ-Ns8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY0-gR-iFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="cff-e5-sHa" customClass="ButtonPeoplePicker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J1O-lQ-NkV">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="4sV-4r-Eqo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add People" id="tgP-Dk-6yk">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1nN-rP-Gz8">
+                                            <connections>
+                                                <action selector="cancelClick:" destination="cff-e5-sHa" id="nix-D0-2iU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="AB5-zw-2T1">
+                                            <connections>
+                                                <action selector="doneClick:" destination="cff-e5-sHa" id="3pb-hu-jnK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" placeholder="Name or organization" showsBookmarkButton="YES" id="2NL-AK-QT1">
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="alphabet"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cff-e5-sHa" id="6uG-U3-hUe"/>
+                                </connections>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="bNZ-Lb-8Yq">
+                                <rect key="frame" x="0.0" y="88" width="320" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the delete key to remove the selected contact" lineBreakMode="tailTruncation" minimumFontSize="10" id="tuM-oY-xSe">
+                                        <rect key="frame" x="5" y="0.0" width="300" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DJh-FR-VRu">
+                                <rect key="frame" x="0.0" y="88" width="320" height="156"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" textLabel="zdu-tX-Zxd" detailTextLabel="7En-21-41s" style="IBUITableViewCellStyleSubtitle" id="du1-SN-edz">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zdu-tX-Zxd">
+                                                    <rect key="frame" x="10" y="2" width="50" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Organization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7En-21-41s">
+                                                    <rect key="frame" x="10" y="24" width="80" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cff-e5-sHa" id="XVs-wW-dwy"/>
+                                    <outlet property="delegate" destination="cff-e5-sHa" id="H2R-2q-dg9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uen-eI-tJy"/>
+                    <connections>
+                        <outlet property="contactsTableView" destination="DJh-FR-VRu" id="Sg6-TW-tFC"/>
+                        <outlet property="deleteLabel" destination="tuM-oY-xSe" id="8xn-gi-TNr"/>
+                        <outlet property="doneButton" destination="AB5-zw-2T1" id="OaU-wW-2GI"/>
+                        <outlet property="scrollView" destination="bNZ-Lb-8Yq" id="Bu2-kr-Lag"/>
+                        <outlet property="searchField" destination="2NL-AK-QT1" id="fxJ-yG-N2q"/>
+                        <segue destination="2CJ-qm-ukN" kind="modal" identifier="showAddPerson" id="xAW-AQ-2vJ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1121" y="89"/>
+        </scene>
+        <!--Add Person View Controller-->
+        <scene sceneID="zYd-Vo-CU8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INy-XO-1F3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="2CJ-qm-ukN" customClass="AddPersonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGa-Wn-FuA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="2eO-I2-oMk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Person" id="ubf-IL-NWi">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Gl2-qP-FtX">
+                                            <connections>
+                                                <action selector="cancelClick:" destination="2CJ-qm-ukN" id="gKZ-rW-ctV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" clearButtonMode="whileEditing" id="Zck-nR-bjD">
+                                <rect key="frame" x="20" y="56" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2CJ-qm-ukN" id="9KC-me-KdM"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" id="gxF-ZN-Agw">
+                                <rect key="frame" x="20" y="94" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2CJ-qm-ukN" id="upL-Jz-V2u"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" id="WZz-k3-yaf">
+                                <rect key="frame" x="20" y="133" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2CJ-qm-ukN" id="rXl-ox-Mb1"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezL-Nu-CAo">
+                                <rect key="frame" x="20" y="193" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addClick:" destination="2CJ-qm-ukN" eventType="touchUpInside" id="zF8-nN-Lj2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="ezL-Nu-CAo" id="tTn-yn-toB"/>
+                        <outlet property="emailTextField" destination="WZz-k3-yaf" id="TqT-p1-i0T"/>
+                        <outlet property="firstNameTextField" destination="Zck-nR-bjD" id="uex-Gx-YOW"/>
+                        <outlet property="lastNameTextField" destination="gxF-ZN-Agw" id="OXb-WN-VHL"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1511" y="89"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="AddPersonViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddPersonViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addClick:"/>
+                <relationship kind="action" name="cancelClick:"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ButtonPeoplePicker" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ButtonPeoplePicker.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelClick:"/>
+                <relationship kind="action" name="doneClick:"/>
+                <relationship kind="outlet" name="contactsTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="deleteLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="searchField" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
         <class className="CreatePollViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CreatePollViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addMembers:" candidateClass="UIButton"/>
                 <relationship kind="action" name="createPollButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="members" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="namesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="questionField" candidateClass="UITextField"/>
             </relationships>
         </class>
