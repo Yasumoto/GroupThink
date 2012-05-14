@@ -54,7 +54,7 @@
             PFUser *user = [objects objectAtIndex:0];
             if (user) {
                 PFACL *pollACL = [pollObject ACL];
-                [pollACL setReadAccess:YES forUser:user];
+                [pollACL setWriteAccess:YES forUser:user];
                 [pollObject setACL:pollACL];
                 [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
