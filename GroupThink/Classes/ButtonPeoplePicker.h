@@ -33,7 +33,7 @@
 }
 
 @property (nonatomic, weak) id <ButtonPeoplePickerDelegate> delegate;
-@property (nonatomic, strong, readonly) NSArray *group;
+@property (nonatomic, strong) NSArray *group;
 
 @end
 
