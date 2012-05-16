@@ -10,12 +10,14 @@
 
 @interface CreatePollViewController ()
 @property (nonatomic, strong) ButtonPeoplePicker *peoplePicker;
+@property (nonatomic, strong) NSArray *sharingMembers;
 @end
 
 @implementation CreatePollViewController
 @synthesize questionField = questionField;
 @synthesize namesLabel;
 @synthesize peoplePicker = _peoplePicker;
+@synthesize sharingMembers = _sharingMembers;
 
 static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 

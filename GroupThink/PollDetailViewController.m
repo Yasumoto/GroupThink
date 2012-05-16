@@ -16,8 +16,7 @@
 @synthesize answer = _answer;
 @synthesize poll = _poll;
 @synthesize QuestionTextView = _QuestionTextView;
-@synthesize memberOneLabel = _memberOneLabel;
-@synthesize memberTwoLabel = _memberTwoLabel;
+@synthesize members = _members;
 @synthesize answers = _answers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -43,8 +42,7 @@
 - (void)viewDidUnload
 {
     [self setQuestionTextView:nil];
-    [self setMemberOneLabel:nil];
-    [self setMemberTwoLabel:nil];
+    [self setMembers:nil];
     [self setAnswers:nil];
     [self setAnswer:nil];
     [super viewDidUnload];
@@ -53,8 +51,7 @@
 
 - (void) updateView {
     self.QuestionTextView.text = [self.poll objectForKey:@"question"];
-    self.memberOneLabel.text = [self.poll objectForKey:@"memberOne"];
-    self.memberTwoLabel.text = [self.poll objectForKey:@"memberTwo"];
+    self.members.text = [self.poll objectForKey:@"members"];
     self.answers.text = [self.poll objectForKey:@"answers"];
 }
 

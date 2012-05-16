@@ -222,7 +222,16 @@ static NSString *kSegueIdentifier = @"showAddPerson";
 		ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
 		
         cell.textLabel.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
-        cell.detailTextLabel.text = (__bridge_transfer NSString *)ABRecordCopyValue(abPerson, kABPersonOrganizationProperty);
+        NSString *email = nil;
+        ABMultiValueRef emailAddresses = ABRecordCopyValue(abPerson, kABPersonEmailProperty);
+        if (ABMultiValueGetCount(emailAddresses) > 0) {
+            email = (__bridge_transfer NSString *)
+            ABMultiValueCopyValueAtIndex(emailAddresses, 0);
+        }
+        else {
+            email = @"[None ]";
+        }
+        cell.detailTextLabel.text = email;
 	}
  
 	return cell;
