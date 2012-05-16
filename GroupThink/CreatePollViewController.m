@@ -11,6 +11,7 @@
 @interface CreatePollViewController ()
 @property (nonatomic, strong) ButtonPeoplePicker *peoplePicker;
 @property (nonatomic, strong) NSArray *sharingMembers;
+- (void) sharePoll:(PFObject *) pollObject;
 @end
 
 @implementation CreatePollViewController
@@ -61,6 +62,12 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     }
 }
 
+- (void) sharePoll:(PFObject *)pollObject {
+    for (NSString *email in self.sharingMembers) {
+        [self addWriteAccessOnPoll:pollObject ForEmailAddress:email];
+    }
+}
+
 - (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
     PFQuery *query = [PFQuery queryForUser];
     [query whereKey:@"email" equalTo:emailAddress];
@@ -90,23 +97,40 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 - (IBAction)createPollButtonPressed:(UIButton *)sender {
     PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
     [pollObject setObject:self.questionField.text forKey:@"question"];
+    [pollObject setObject:self.sharingMembers forKey:@"members"];
+    [pollObject setObject:[[PFUser currentUser] email] forKey:@"owner"];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Saved poll succeeded!");
+            [self sharePoll:pollObject];
         }
     }];
 }
 
 #pragma mark - Update Person info
+- (NSString *)getEmailAddressForPerson:(ABRecordRef) abPerson {
+    NSString *email = nil;
+    ABMultiValueRef emailAddresses = ABRecordCopyValue(abPerson, kABPersonEmailProperty);
+    if (ABMultiValueGetCount(emailAddresses) > 0) {
+        email = (__bridge_transfer NSString *)
+        ABMultiValueCopyValueAtIndex(emailAddresses, 0);
+    }
+    else {
+        email = @"[None ]";
+    }
+    return email;
+}
 
 - (void)updatePersonInfo:(NSArray *)group
 {
 	ABAddressBookRef addressBook = ABAddressBookCreate();
-	NSMutableString *namesString = [NSMutableString string];	
+	NSMutableString *namesString = [NSMutableString string];
+    NSMutableArray *members = [[NSMutableArray alloc] init];
 	for (int i = 0; i < group.count; i++) {		
 		NSNumber *personID = (NSNumber *)[group objectAtIndex:i];
 		ABRecordID abRecordID = (ABRecordID)[personID intValue];
 		ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
+        [members addObject:[self getEmailAddressForPerson:abPerson]];
 		NSString *name = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
 		if (i < (group.count - 1)) {
 			[namesString appendString:[NSString stringWithFormat:@"%@, ", name]];
@@ -114,7 +138,8 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 		else {
 			[namesString appendString:[NSString stringWithFormat:@"%@", name]];
 		}
-	}    
+	}
+    self.sharingMembers = [members copy];
 	[namesLabel setText:namesString];
 	CFRelease(addressBook);
 }

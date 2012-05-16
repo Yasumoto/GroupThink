@@ -84,7 +84,7 @@
                                       reuseIdentifier:@"Poll List Cells"];
     }
     cell.textLabel.text = [object objectForKey:@"question"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", [object objectForKey:@"memberOne"], [object objectForKey:@"memberTwo"]];
+    cell.detailTextLabel.text = [object objectForKey:@"owner"];
     return cell;
 }
 

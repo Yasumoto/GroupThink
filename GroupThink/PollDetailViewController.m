@@ -51,8 +51,13 @@
 
 - (void) updateView {
     self.QuestionTextView.text = [self.poll objectForKey:@"question"];
-    self.members.text = [self.poll objectForKey:@"members"];
+    NSString *memberList = @"";
+    for (NSString *memberName in [self.poll objectForKey:@"members"]) {
+        memberList = [memberList stringByAppendingFormat:@"%@\n", memberName];
+    }
+    self.members.text = memberList;
     self.answers.text = [self.poll objectForKey:@"answers"];
+    self.navigationController.title = [self.poll objectForKey:@"owner"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
