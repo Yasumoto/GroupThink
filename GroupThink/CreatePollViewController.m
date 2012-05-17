@@ -15,6 +15,7 @@
 @end
 
 @implementation CreatePollViewController
+@synthesize imageButton;
 @synthesize questionField = questionField;
 @synthesize namesLabel;
 @synthesize peoplePicker = _peoplePicker;
@@ -47,6 +48,7 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 {
     self.questionField = nil;
     [self setNamesLabel:nil];
+    [self setImageButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -105,6 +107,9 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
             self.navigationItem.rightBarButtonItem = sender;
         }
     }];
+}
+
+- (IBAction)selectImage:(id)sender {
 }
 
 - (IBAction)createPollButtonPressed:(UIBarButtonItem *)sender {

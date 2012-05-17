@@ -13,5 +13,7 @@
 @interface CreatePollViewController : UIViewController <UITextFieldDelegate, ButtonPeoplePickerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
 @property (weak, nonatomic) IBOutlet UILabel *namesLabel;
+- (IBAction)selectImage:(id)sender;
 - (IBAction) createPollButtonPressed:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 @end
