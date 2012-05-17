@@ -106,12 +106,14 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 - (IBAction)selectImage:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    //TODO(joe): We want people on devices with cameras to either take a photo
+    // or select from their library. Will need to display a new view.
+    /*if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
-    else {
+    else {*/
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
+    //}
     [self presentModalViewController:picker animated:YES];
 }
 
