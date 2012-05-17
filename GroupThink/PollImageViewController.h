@@ -10,6 +10,5 @@
 
 @interface PollImageViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) UIImage *image;
 @end

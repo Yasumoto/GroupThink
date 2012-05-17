@@ -11,8 +11,8 @@
 #define MINIMUM_SCROLL_SCALE 0.5;
 #define MAXIMUM_SCROLL_SCALE 2.0;
 
-@interface PollImageViewController ()
-
+@interface PollImageViewController () <UIScrollViewDelegate>
+@property (strong, nonatomic) UIImageView *imageView;
 @end
 
 @implementation PollImageViewController
@@ -35,6 +35,7 @@
 	// Do any additional setup after loading the view.
     self.scrollView.minimumZoomScale = MINIMUM_SCROLL_SCALE;
     self.scrollView.maximumZoomScale = MAXIMUM_SCROLL_SCALE;
+    self.scrollView.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -46,7 +47,8 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.imageView.image = self.image;
+    self.imageView = [[UIImageView alloc] initWithImage:self.image];
+    [self.scrollView addSubview:self.imageView];
     self.scrollView.zoomScale = 1;
     self.scrollView.contentSize = self.imageView.bounds.size;
     CGFloat widthZoom = self.scrollView.bounds.size.width / self.imageView.image.size.width;
