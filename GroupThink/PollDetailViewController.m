@@ -63,7 +63,12 @@
     self.navigationItem.title = [self.poll objectForKey:@"owner"];
     PFFile *imageData = [self.poll objectForKey:@"image"];
     if (![imageData isKindOfClass:[NSNull class]]) {
+        UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        [spinner startAnimating];
+        [self.imageButton addSubview:spinner];
+        spinner.frame = CGRectMake(25.0, 25.0, spinner.frame.size.width, spinner.frame.size.height);
         [imageData getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            [spinner removeFromSuperview];
             UIImage *image = [UIImage imageWithData:data];
             self.image = image;
             [self.imageButton setImage:image forState:UIControlStateNormal];
