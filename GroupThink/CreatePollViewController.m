@@ -79,11 +79,7 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
                 [pollACL setReadAccess:YES forUser:user];
                 [pollACL setWriteAccess:YES forUser:user];
                 [pollObject setACL:pollACL];
-                [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if (succeeded) {
-                        NSLog(@"The poll has the correct ACLs!");
-                    }
-                }];
+                NSLog(@"Sharing ACLs have been set.");
             }
         }
     }];
@@ -94,17 +90,25 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)createPollButtonPressed:(UIButton *)sender {
+- (void) refresh:(UIBarButtonItem *) sender {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [spinner startAnimating];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
     PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
     [pollObject setObject:self.questionField.text forKey:@"question"];
     [pollObject setObject:self.sharingMembers forKey:@"members"];
     [pollObject setObject:[[PFUser currentUser] email] forKey:@"owner"];
+    [self sharePoll:pollObject];
     [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Saved poll succeeded!");
-            [self sharePoll:pollObject];
+            self.navigationItem.rightBarButtonItem = sender;
         }
     }];
+}
+
+- (IBAction)createPollButtonPressed:(UIBarButtonItem *)sender {
+    [self refresh:sender];
 }
 
 #pragma mark - Update Person info

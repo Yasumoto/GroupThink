@@ -57,7 +57,7 @@
     }
     self.members.text = memberList;
     self.answers.text = [self.poll objectForKey:@"answers"];
-    self.navigationController.title = [self.poll objectForKey:@"owner"];
+    self.navigationItem.title = [self.poll objectForKey:@"owner"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -74,6 +74,17 @@
         if (succeeded) {
             [self updateView];
         }
+    }];
+}
+
+- (IBAction)refresh:(UIBarButtonItem *)sender {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [spinner startAnimating];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
+    [self.poll refreshInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        self.poll = object;
+        self.navigationItem.rightBarButtonItem = sender;
+        [self updateView];
     }];
 }
 

@@ -13,5 +13,5 @@
 @interface CreatePollViewController : UIViewController <UITextFieldDelegate, ButtonPeoplePickerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
 @property (weak, nonatomic) IBOutlet UILabel *namesLabel;
-- (IBAction) createPollButtonPressed:(UIButton *)sender;
+- (IBAction) createPollButtonPressed:(UIBarButtonItem *)sender;
 @end
