@@ -170,13 +170,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Members" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="xmR-7q-kB7">
-                                <rect key="frame" x="20" y="28" width="280" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Icy-UD-Esj">
                                 <rect key="frame" x="104" y="310" width="112" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -199,26 +192,51 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qLI-Lv-dRT">
-                                <rect key="frame" x="20" y="96" width="280" height="167"/>
+                                <rect key="frame" x="20" y="88" width="280" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="ido-1g-61j">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="167"/>
+                                        <rect key="frame" x="0.0" y="83" width="280" height="92"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kKr-Py-pKT">
+                                        <rect key="frame" x="103" y="0.0" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KCy-kp-Qzb">
                                 <rect key="frame" x="20" y="0.0" width="280" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EUx-sR-MUV">
+                                <rect key="frame" x="20" y="38" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="wAH-qT-Bn4">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -233,7 +251,8 @@
                         <outlet property="QuestionTextView" destination="KCy-kp-Qzb" id="kMF-bW-Ur0"/>
                         <outlet property="answer" destination="EgD-3d-YuZ" id="RDP-1H-Yj2"/>
                         <outlet property="answers" destination="ido-1g-61j" id="OKl-LR-Lpk"/>
-                        <outlet property="members" destination="xmR-7q-kB7" id="51b-Rd-RDP"/>
+                        <outlet property="imageButton" destination="kKr-Py-pKT" id="ZBk-ev-JbP"/>
+                        <outlet property="members" destination="wAH-qT-Bn4" id="qQS-tL-JYm"/>
                     </connections>
                 </viewController>
             </objects>
@@ -506,7 +525,6 @@
                 <relationship kind="outlet" name="imageButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="namesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="questionField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sharingImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
@@ -523,7 +541,8 @@
                 <relationship kind="outlet" name="QuestionTextView" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answer" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="answers" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="members" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="members" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="PollTableViewController" superclassName="PFQueryTableViewController">

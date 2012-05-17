@@ -19,26 +19,26 @@
 {
     // ****************************************************************************
     // Uncomment and fill in with your Parse credentials:
-    [Parse setApplicationId:@"msz0pSBTRg6TvKklFBfVzJna8gpw8aNMSRQGMCxv" 
+    [Parse setApplicationId:@"msz0pSBTRg6TvKklFBfVzJna8gpw8aNMSRQGMCxv"
                   clientKey:@"a6gRK1R3qDMbSyD32blZtKZWTPAmGVFq2CxsAH5m"];
     // If you are using Facebook, uncomment and fill in with your Facebook App Id:
     [PFFacebookUtils initializeWithApplicationId:@"311355818940970"];
     // ****************************************************************************
-    
+
     [TestFlight takeOff:@"aac013542c07cae2bc366df9f05be55d_ODk3MTYyMDEyLTA1LTEyIDE2OjQ1OjAzLjQ3NDA0Nw"];
 #define TESTING 1
 #ifdef TESTING
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #endif
-    
+
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [PFACL ACL];
     // Optionally enable public read access by default.
     // [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
+
     // Override point for customization after application launch.
-    
+
     /*[application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];*/
@@ -89,7 +89,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

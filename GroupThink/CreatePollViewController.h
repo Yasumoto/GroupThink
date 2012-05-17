@@ -10,10 +10,14 @@
 #import <Parse/Parse.h>
 #import "ButtonPeoplePicker.h"
 
-@interface CreatePollViewController : UIViewController <UITextFieldDelegate, ButtonPeoplePickerDelegate>
+@interface CreatePollViewController : UIViewController <UITextFieldDelegate,
+                                                        ButtonPeoplePickerDelegate,
+                                                        UINavigationControllerDelegate,
+                                                        UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
 @property (weak, nonatomic) IBOutlet UILabel *namesLabel;
+
 - (IBAction)selectImage:(id)sender;
 - (IBAction) createPollButtonPressed:(UIBarButtonItem *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 @end

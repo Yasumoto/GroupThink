@@ -14,6 +14,7 @@
 
 @implementation PollDetailViewController
 @synthesize answer = _answer;
+@synthesize imageButton = _imageButton;
 @synthesize poll = _poll;
 @synthesize QuestionTextView = _QuestionTextView;
 @synthesize members = _members;
@@ -45,6 +46,7 @@
     [self setMembers:nil];
     [self setAnswers:nil];
     [self setAnswer:nil];
+    [self setImageButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -58,6 +60,13 @@
     self.members.text = memberList;
     self.answers.text = [self.poll objectForKey:@"answers"];
     self.navigationItem.title = [self.poll objectForKey:@"owner"];
+    PFFile *imageData = [self.poll objectForKey:@"image"];
+    if (![imageData isKindOfClass:[NSNull class]]) {
+        [imageData getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            UIImage *image = [UIImage imageWithData:data];
+            [self.imageButton setImage:image forState:UIControlStateNormal];
+        }];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

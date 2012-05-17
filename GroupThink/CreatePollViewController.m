@@ -11,6 +11,7 @@
 @interface CreatePollViewController ()
 @property (nonatomic, strong) ButtonPeoplePicker *peoplePicker;
 @property (nonatomic, strong) NSArray *sharingMembers;
+@property (nonatomic, strong) UIImage *image;
 - (void) sharePoll:(PFObject *) pollObject;
 @end
 
@@ -20,6 +21,7 @@
 @synthesize namesLabel;
 @synthesize peoplePicker = _peoplePicker;
 @synthesize sharingMembers = _sharingMembers;
+@synthesize image = _image;
 
 static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 
@@ -42,6 +44,7 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.questionField.delegate = self;
+    [self resetImageButtonImage];
 }
 
 - (void)viewDidUnload
@@ -73,16 +76,19 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 - (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
     PFQuery *query = [PFQuery queryForUser];
     [query whereKey:@"email" equalTo:emailAddress];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if(!error && objects.count > 0) {
-            PFUser *user = [objects objectAtIndex:0];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if(!error && [object isKindOfClass:[PFUser class]]) {
+            PFUser *user = (PFUser *)object;
             if (user) {
                 PFACL *pollACL = [pollObject ACL];
                 [pollACL setReadAccess:YES forUser:user];
                 [pollACL setWriteAccess:YES forUser:user];
                 [pollObject setACL:pollACL];
-                NSLog(@"Sharing ACLs have been set.");
+                NSLog(@"Sharing ACLs have been set for %@", [user email]);
             }
+        }
+        else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
 }
@@ -92,7 +98,30 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) refresh:(UIBarButtonItem *) sender {
+- (void) resetImageButtonImage {
+    [self.imageButton setImage:[UIImage imageNamed:@"choose.png"] forState:UIControlStateNormal];
+    [self.imageButton setImage:[UIImage imageNamed:@"choose_hilighted.png"] forState:UIControlStateHighlighted];
+}
+
+- (IBAction)selectImage:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    [self presentModalViewController:picker animated:YES];
+}
+
+- (IBAction)createPollButtonPressed:(UIBarButtonItem *)sender {
+    if ([[self.questionField.text stringByReplacingOccurrencesOfString:@" " withString:@""] isEqualToString:@""] ||
+        [self.sharingMembers count] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Whoa Nelly!" message:@"Make sure you don't leave out the details!" delegate:nil cancelButtonTitle:@"fml" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
@@ -101,20 +130,60 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     [pollObject setObject:self.sharingMembers forKey:@"members"];
     [pollObject setObject:[[PFUser currentUser] email] forKey:@"owner"];
     [self sharePoll:pollObject];
-    [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Saved poll succeeded!");
-            self.navigationItem.rightBarButtonItem = sender;
-        }
-    }];
+    if (self.image) {
+        NSData *data = UIImagePNGRepresentation(self.image);
+        PFFile *imageFile = [PFFile fileWithName:@"pollImage.png" data:data];
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Photo has been uploaded and saved!");
+                [pollObject setObject:imageFile forKey:@"image"];
+                [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (succeeded) {
+                        NSLog(@"Saved poll (with photo)!");
+                        self.navigationItem.rightBarButtonItem = sender;
+                    }
+                    else {
+                        NSLog(@"Error: %@ %@", error, [error userInfo]);
+                    }
+                }];
+            }
+            else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+
+        }];
+    }
+    else {
+        [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Saved poll!");
+                self.navigationItem.rightBarButtonItem = sender;
+            }
+            else {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
 }
 
-- (IBAction)selectImage:(id)sender {
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSLog(@"Chose a photo.");
+    self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+
+    [self.imageButton setImage:self.image forState:UIControlStateNormal];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction)createPollButtonPressed:(UIBarButtonItem *)sender {
-    [self refresh:sender];
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    self.image = nil;
+    [self resetImageButtonImage];
+    [self dismissModalViewControllerAnimated:YES];
 }
+
+
 
 #pragma mark - Update Person info
 - (NSString *)getEmailAddressForPerson:(ABRecordRef) abPerson {
