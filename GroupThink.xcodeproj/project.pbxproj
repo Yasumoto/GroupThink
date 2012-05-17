@@ -45,6 +45,7 @@
 		D854FDF41560C09500314501 /* ButtonCorners.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDF01560C09500314501 /* ButtonCorners.png */; };
 		D854FDF51560C09500314501 /* ButtonCorners@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDF11560C09500314501 /* ButtonCorners@2x.png */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
+		D876F1B3156504F6000793CD /* PollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D876F1B2156504F6000793CD /* PollImageViewController.m */; };
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
 		D895D4C9155F11B800F7924D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C7155F11B800F7924D /* AddressBook.framework */; };
 		D895D4CA155F11B800F7924D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C8155F11B800F7924D /* AddressBookUI.framework */; };
@@ -111,6 +112,8 @@
 		D854FDF11560C09500314501 /* ButtonCorners@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonCorners@2x.png"; sourceTree = "<group>"; };
 		D863DF591559F63600FA9934 /* CreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewController.h; sourceTree = "<group>"; };
 		D863DF5A1559F63600FA9934 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
+		D876F1B1156504F6000793CD /* PollImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollImageViewController.h; sourceTree = "<group>"; };
+		D876F1B2156504F6000793CD /* PollImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollImageViewController.m; sourceTree = "<group>"; };
 		D88D7F90155A1843002C6C36 /* PollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollDetailViewController.h; sourceTree = "<group>"; };
 		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
 		D895D4C7155F11B800F7924D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -209,6 +212,8 @@
 				D82712D81564BAD100FDAFFB /* SettingsViewController.h */,
 				D82712D91564BAD100FDAFFB /* SettingsViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
+				D876F1B1156504F6000793CD /* PollImageViewController.h */,
+				D876F1B2156504F6000793CD /* PollImageViewController.m */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
@@ -412,6 +417,7 @@
 				D854FDDE1560B6DF00314501 /* AddPersonViewController.m in Sources */,
 				D854FDE11560B6DF00314501 /* ButtonPeoplePicker.m in Sources */,
 				D82712DA1564BAD100FDAFFB /* SettingsViewController.m in Sources */,
+				D876F1B3156504F6000793CD /* PollImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

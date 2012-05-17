@@ -19,6 +19,7 @@
 @synthesize QuestionTextView = _QuestionTextView;
 @synthesize members = _members;
 @synthesize answers = _answers;
+@synthesize image = _image;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +65,7 @@
     if (![imageData isKindOfClass:[NSNull class]]) {
         [imageData getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             UIImage *image = [UIImage imageWithData:data];
+            self.image = image;
             [self.imageButton setImage:image forState:UIControlStateNormal];
         }];
     }
@@ -104,4 +106,10 @@
     return YES;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"PollImageView"]) {
+        PollImageViewController *destinationVC = (PollImageViewController *) segue.destinationViewController;
+        destinationVC.image = self.image;
+    }
+}
 @end

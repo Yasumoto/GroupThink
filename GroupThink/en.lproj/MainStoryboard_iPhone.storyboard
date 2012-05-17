@@ -214,6 +214,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="H0K-yb-rea" kind="push" identifier="PollImageView" id="bdo-eK-Wwv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
@@ -257,6 +260,37 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1097" y="809"/>
+        </scene>
+        <!--Poll Image View Controller-->
+        <scene sceneID="Wlb-l6-Zxc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIT-kF-7gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="H0K-yb-rea" customClass="PollImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1sv-L9-42q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="e7Q-gH-ZqG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2XE-aW-fFL">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ogj-x3-SZD"/>
+                    <connections>
+                        <outlet property="imageView" destination="2XE-aW-fFL" id="RGr-cY-Cm6"/>
+                        <outlet property="scrollView" destination="e7Q-gH-ZqG" id="SRn-x0-hx5"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1488" y="810"/>
         </scene>
         <!--Navigation Controller - Create-->
         <scene sceneID="APH-oK-Bre">
@@ -543,6 +577,13 @@
                 <relationship kind="outlet" name="answers" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="imageButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="members" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="PollImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PollImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="PollTableViewController" superclassName="PFQueryTableViewController">

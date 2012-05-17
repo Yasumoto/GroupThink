@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "PollImageViewController.h"
 
 @interface PollDetailViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) PFObject *poll;
@@ -18,5 +19,5 @@
 - (IBAction)refresh:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UITextField *answer;
 @property (weak, nonatomic) IBOutlet UIButton *imageButton;
-
+@property (strong, nonatomic) UIImage *image;
 @end
