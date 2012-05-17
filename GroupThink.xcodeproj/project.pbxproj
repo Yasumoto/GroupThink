@@ -10,6 +10,7 @@
 		D804C381155B7E4000AAF415 /* GroupThink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D804C380155B7E4000AAF415 /* GroupThink.entitlements */; };
 		D804C388155B884600AAF415 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D804C387155B884600AAF415 /* Icon.png */; };
 		D804C38A155B88AC00AAF415 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D804C389155B88AC00AAF415 /* Icon-72.png */; };
+		D82712DA1564BAD100FDAFFB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82712D91564BAD100FDAFFB /* SettingsViewController.m */; };
 		D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		D804C380155B7E4000AAF415 /* GroupThink.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = GroupThink.entitlements; sourceTree = "<group>"; };
 		D804C387155B884600AAF415 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D804C389155B88AC00AAF415 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		D82712D81564BAD100FDAFFB /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D82712D91564BAD100FDAFFB /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D82CB1EE1556051A00499A08 /* GroupThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82CB1F21556051A00499A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D82CB1F41556051A00499A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,6 +202,8 @@
 				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
 				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
 				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
+				D82712D81564BAD100FDAFFB /* SettingsViewController.h */,
+				D82712D91564BAD100FDAFFB /* SettingsViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
@@ -398,6 +403,7 @@
 				D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */,
 				D854FDDE1560B6DF00314501 /* AddPersonViewController.m in Sources */,
 				D854FDE11560B6DF00314501 /* ButtonPeoplePicker.m in Sources */,
+				D82712DA1564BAD100FDAFFB /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
