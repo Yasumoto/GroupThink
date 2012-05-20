@@ -13,6 +13,8 @@
 @end
 
 @implementation SettingsViewController
+@synthesize emailAddress = _emailAddress;
+@synthesize name = _name;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +29,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.name.text = [NSString stringWithFormat:@"Hope you're enjoying Gather, %@!", [[PFUser currentUser] username]];
 }
 
 - (void)viewDidUnload
 {
+    [self setName:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -40,4 +44,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)signOut:(id)sender {
+    self.emailAddress = [[PFUser currentUser] email];
+    NSLog(@"Logging out %@", self.emailAddress);
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"logItOut" sender:self];
+}
 @end
