@@ -68,8 +68,17 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 }
 
 - (void) sharePoll:(PFObject *)pollObject {
+    NSString *invitation = [NSString stringWithFormat:@"%@ has invited you to a poll", [[PFUser currentUser] username]];
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                          invitation, @"alert",
+                          [NSNumber numberWithInt:1], @"badge", nil];
     for (NSString *email in self.sharingMembers) {
-        [self addWriteAccessOnPoll:pollObject ForEmailAddress:email];
+        [PFPush sendPushDataToChannelInBackground:[[PFUser currentUser] username] withData:data block:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                NSLog(@"Successfully sent out notification to %@", email);
+                [self addWriteAccessOnPoll:pollObject ForEmailAddress:email];
+            }
+        }];
     }
 }
 
