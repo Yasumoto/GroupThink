@@ -81,13 +81,20 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)addAnswer:(UIButton *)sender {
+- (IBAction)addAnswer:(id)sender {
+    UIBarButtonItem *refresh = self.navigationItem.rightBarButtonItem;
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [spinner startAnimating];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
     NSString *answer = [self.answers.text stringByAppendingString:@"\n"];
+    NSLog(@"Adding answer: %@", self.answer.text);
     answer = [answer stringByAppendingString:self.answer.text];
     answer = [answer stringByAppendingFormat:@" - %@", [PFUser currentUser].username];
     [self.poll setObject:answer forKey:@"answers"];
     [self.poll saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
+            self.navigationItem.rightBarButtonItem = refresh;
+            self.answer.text = @"";
             [self updateView];
         }
     }];

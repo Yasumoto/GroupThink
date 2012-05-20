@@ -199,23 +199,14 @@
 		D82CB1F81556051A00499A08 /* GroupThink */ = {
 			isa = PBXGroup;
 			children = (
-				D82CB2011556051A00499A08 /* AppDelegate.h */,
-				D82CB2021556051A00499A08 /* AppDelegate.m */,
+				D8424F671568725800DBF6C3 /* ViewPolls */,
+				D8424F661568722E00DBF6C3 /* CreatePoll */,
 				D82CB20C1556051A00499A08 /* LoginViewController.h */,
 				D82CB20D1556051A00499A08 /* LoginViewController.m */,
-				D863DF591559F63600FA9934 /* CreatePollViewController.h */,
-				D863DF5A1559F63600FA9934 /* CreatePollViewController.m */,
-				D82CB23C1556119F00499A08 /* PollTableViewController.h */,
-				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
-				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
-				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
 				D82712D81564BAD100FDAFFB /* SettingsViewController.h */,
 				D82712D91564BAD100FDAFFB /* SettingsViewController.m */,
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
-				D876F1B1156504F6000793CD /* PollImageViewController.h */,
-				D876F1B2156504F6000793CD /* PollImageViewController.m */,
 				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
-				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
 			path = GroupThink;
@@ -224,6 +215,8 @@
 		D82CB1F91556051A00499A08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D82CB2011556051A00499A08 /* AppDelegate.h */,
+				D82CB2021556051A00499A08 /* AppDelegate.m */,
 				D854FDEE1560C09500314501 /* Images */,
 				D804C389155B88AC00AAF415 /* Icon-72.png */,
 				D804C387155B884600AAF415 /* Icon.png */,
@@ -264,6 +257,29 @@
 				D8374EE6155F06C200BC1617 /* TestFlight.h */,
 			);
 			path = TestFlightSDK1;
+			sourceTree = "<group>";
+		};
+		D8424F661568722E00DBF6C3 /* CreatePoll */ = {
+			isa = PBXGroup;
+			children = (
+				D863DF591559F63600FA9934 /* CreatePollViewController.h */,
+				D863DF5A1559F63600FA9934 /* CreatePollViewController.m */,
+				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
+			);
+			name = CreatePoll;
+			sourceTree = "<group>";
+		};
+		D8424F671568725800DBF6C3 /* ViewPolls */ = {
+			isa = PBXGroup;
+			children = (
+				D876F1B1156504F6000793CD /* PollImageViewController.h */,
+				D876F1B2156504F6000793CD /* PollImageViewController.m */,
+				D82CB23C1556119F00499A08 /* PollTableViewController.h */,
+				D82CB23D1556119F00499A08 /* PollTableViewController.m */,
+				D88D7F90155A1843002C6C36 /* PollDetailViewController.h */,
+				D88D7F91155A1843002C6C36 /* PollDetailViewController.m */,
+			);
+			name = ViewPolls;
 			sourceTree = "<group>";
 		};
 		D854FDD51560B6DF00314501 /* ButtonPeoplePicker */ = {
