@@ -39,9 +39,9 @@
 
     // Override point for customization after application launch.
 
-    /*[application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];*/
+     UIRemoteNotificationTypeSound];
     return YES;
 }
 
