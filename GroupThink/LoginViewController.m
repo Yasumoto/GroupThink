@@ -21,7 +21,6 @@
 #pragma mark PFLogInViewControllerDelegate
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    NSLog(@"%@", user);
     if (user) {
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"User %@ has been logged in, performing segue.", user);
@@ -39,6 +38,7 @@
 #pragma mark PFSignUpViewControllerDelegate
 
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [self updatePollACLs];
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -67,6 +67,8 @@
 - (void) viewDidAppear:(BOOL)animated {
     if ([PFUser currentUser].username) {
         NSLog(@"Logged in user is: %@", [PFUser currentUser].username);
+        // TODO(Yasumoto): remove the below line
+        [self updatePollACLs];
         [self performSegueWithIdentifier:LOGGED_IN_SEGUE sender:self];
     } else {
         PFLogInViewController *logInController = [[PFLogInViewController alloc] init];
@@ -101,6 +103,19 @@
     if ([segue.identifier isEqualToString:LOGGED_IN_SEGUE]) {
         NSLog(@"%@", @"Preparing to segue to main view");
     }
+}
+
+#pragma mark Update Poll Sharing
+
+- (void) updatePollACLs {
+    NSString *emailAddress = [[PFUser currentUser] email];
+    PFQuery *sharingQuery = [PFQuery queryWithClassName:@"Polls"];
+    [sharingQuery whereKey:@"members" equalTo:emailAddress];
+    NSLog(@"Checking for previously shared polls with %@", emailAddress);
+    [sharingQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"%@", objects);
+    }];
+
 }
 
 @end

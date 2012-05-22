@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SettingsViewController : UIViewController
+@property (nonatomic, strong) NSString *emailAddress;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+- (IBAction)signOut:(id)sender;
 
 @end
