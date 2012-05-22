@@ -58,7 +58,9 @@
 {
     [PFPush storeDeviceToken:newDeviceToken];
     [PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
-    [PFPush subscribeToChannelInBackground:[[PFUser currentUser] username]];
+    if ([[PFUser currentUser] username]) {
+        [PFPush subscribeToChannelInBackground:[[PFUser currentUser] username]];
+    }
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error

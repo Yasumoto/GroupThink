@@ -25,6 +25,7 @@
     if (user) {
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"User %@ has been logged in, performing segue.", user);
+            [PFPush subscribeToChannelInBackground:[[PFUser currentUser] username]];
             [self performSegueWithIdentifier:LOGGED_IN_SEGUE sender:self];
         }];
     }

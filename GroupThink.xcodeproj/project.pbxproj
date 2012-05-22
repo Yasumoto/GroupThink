@@ -13,6 +13,7 @@
 		D82712DA1564BAD100FDAFFB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82712D91564BAD100FDAFFB /* SettingsViewController.m */; };
 		D82712DD1564C14400FDAFFB /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = D82712DC1564C14400FDAFFB /* choose.png */; };
 		D82712DF1564C2A800FDAFFB /* choose_hilighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D82712DE1564C2A800FDAFFB /* choose_hilighted.png */; };
+		D82935EF156B6D5A0067AE38 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82935EE156B6D5A0067AE38 /* Parse.framework */; };
 		D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
@@ -20,14 +21,12 @@
 		D82CB1FF1556051A00499A08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB1FE1556051A00499A08 /* main.m */; };
 		D82CB2031556051A00499A08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB2021556051A00499A08 /* AppDelegate.m */; };
 		D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */; };
-		D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */; };
 		D82CB20E1556051A00499A08 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB20D1556051A00499A08 /* LoginViewController.m */; };
 		D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB2151556051A00499A08 /* SenTestingKit.framework */; };
 		D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D82CB2201556051A00499A08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D82CB21E1556051A00499A08 /* InfoPlist.strings */; };
 		D82CB2231556051A00499A08 /* GroupThinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CB2221556051A00499A08 /* GroupThinkTests.m */; };
-		D82CB22D1556057E00499A08 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB22C1556057E00499A08 /* Parse.framework */; };
 		D82CB22F1556059C00499A08 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB22E1556059C00499A08 /* CFNetwork.framework */; };
 		D82CB231155605A900499A08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB230155605A900499A08 /* SystemConfiguration.framework */; };
 		D82CB233155605B500499A08 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB232155605B500499A08 /* MobileCoreServices.framework */; };
@@ -69,6 +68,7 @@
 		D82712D91564BAD100FDAFFB /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D82712DC1564C14400FDAFFB /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = choose.png; path = ../Classes/choose.png; sourceTree = "<group>"; };
 		D82712DE1564C2A800FDAFFB /* choose_hilighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose_hilighted.png; sourceTree = "<group>"; };
+		D82935EE156B6D5A0067AE38 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D82CB1EE1556051A00499A08 /* GroupThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82CB1F21556051A00499A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D82CB1F41556051A00499A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +80,6 @@
 		D82CB2011556051A00499A08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D82CB2021556051A00499A08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D82CB2071556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		D82CB20A1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D82CB20C1556051A00499A08 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D82CB20D1556051A00499A08 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D82CB2141556051A00499A08 /* GroupThinkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupThinkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +88,6 @@
 		D82CB21F1556051A00499A08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D82CB2211556051A00499A08 /* GroupThinkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupThinkTests.h; sourceTree = "<group>"; };
 		D82CB2221556051A00499A08 /* GroupThinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupThinkTests.m; sourceTree = "<group>"; };
-		D82CB22C1556057E00499A08 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D82CB22E1556059C00499A08 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D82CB230155605A900499A08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D82CB232155605B500499A08 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -134,11 +132,11 @@
 				D82CB233155605B500499A08 /* MobileCoreServices.framework in Frameworks */,
 				D82CB231155605A900499A08 /* SystemConfiguration.framework in Frameworks */,
 				D82CB22F1556059C00499A08 /* CFNetwork.framework in Frameworks */,
-				D82CB22D1556057E00499A08 /* Parse.framework in Frameworks */,
 				D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */,
 				D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */,
 				D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */,
 				D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */,
+				D82935EF156B6D5A0067AE38 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +177,7 @@
 		D82CB1F11556051A00499A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D82935EE156B6D5A0067AE38 /* Parse.framework */,
 				D8374EE2155F06C200BC1617 /* TestFlightSDK1 */,
 				D82CB23A155605E900499A08 /* libz.1.1.3.dylib */,
 				D82CB238155605D900499A08 /* QuartzCore.framework */,
@@ -187,7 +186,6 @@
 				D82CB232155605B500499A08 /* MobileCoreServices.framework */,
 				D82CB230155605A900499A08 /* SystemConfiguration.framework */,
 				D82CB22E1556059C00499A08 /* CFNetwork.framework */,
-				D82CB22C1556057E00499A08 /* Parse.framework */,
 				D82CB1F21556051A00499A08 /* UIKit.framework */,
 				D82CB1F41556051A00499A08 /* Foundation.framework */,
 				D82CB1F61556051A00499A08 /* CoreGraphics.framework */,
@@ -214,7 +212,6 @@
 				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D876F1B1156504F6000793CD /* PollImageViewController.h */,
 				D876F1B2156504F6000793CD /* PollImageViewController.m */,
-				D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */,
 				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
@@ -363,7 +360,6 @@
 			files = (
 				D82CB1FD1556051A00499A08 /* InfoPlist.strings in Resources */,
 				D82CB2081556051A00499A08 /* MainStoryboard_iPhone.storyboard in Resources */,
-				D82CB20B1556051A00499A08 /* MainStoryboard_iPad.storyboard in Resources */,
 				D804C381155B7E4000AAF415 /* GroupThink.entitlements in Resources */,
 				D804C388155B884600AAF415 /* Icon.png in Resources */,
 				D804C38A155B88AC00AAF415 /* Icon-72.png in Resources */,
@@ -456,14 +452,6 @@
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		D82CB2091556051A00499A08 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D82CB20A1556051A00499A08 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		D82CB21E1556051A00499A08 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -503,7 +491,7 @@
 				PROVISIONING_PROFILE = "060029DE-9BF9-402F-A14D-61229E8F1DDB";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -529,7 +517,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

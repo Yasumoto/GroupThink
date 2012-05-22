@@ -73,33 +73,33 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
                           invitation, @"alert",
                           [NSNumber numberWithInt:1], @"badge", nil];
     for (NSString *email in self.sharingMembers) {
-        [PFPush sendPushDataToChannelInBackground:[[PFUser currentUser] username] withData:data block:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                NSLog(@"Successfully sent out notification to %@", email);
-                [self addWriteAccessOnPoll:pollObject ForEmailAddress:email];
+        PFQuery *query = [PFQuery queryForUser];
+        [query whereKey:@"email" equalTo:email];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if(!error && [object isKindOfClass:[PFUser class]]) {
+                PFUser *user = (PFUser *) object;
+                NSLog(@"Sharing with %@", [user username]);
+                [PFPush sendPushDataToChannelInBackground:[user username] withData:data block:^(BOOL succeeded, NSError *error) {
+                    if (succeeded) {
+                        NSLog(@"Successfully sent out notification to %@", email);
+                        [self addWriteAccessOnPoll:pollObject forUser:user];
+                    }
+                    else {
+                        NSLog(@"Error: %@ %@", error, [error userInfo]);
+                    }
+                }];
             }
         }];
     }
 }
 
-- (void) addWriteAccessOnPoll:(PFObject *)pollObject ForEmailAddress:(NSString *)emailAddress {
-    PFQuery *query = [PFQuery queryForUser];
-    [query whereKey:@"email" equalTo:emailAddress];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if(!error && [object isKindOfClass:[PFUser class]]) {
-            PFUser *user = (PFUser *)object;
-            if (user) {
-                PFACL *pollACL = [pollObject ACL];
-                [pollACL setReadAccess:YES forUser:user];
-                [pollACL setWriteAccess:YES forUser:user];
-                [pollObject setACL:pollACL];
-                NSLog(@"Sharing ACLs have been set for %@", [user email]);
-            }
-        }
-        else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+- (void) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user {
+    PFACL *pollACL = [pollObject ACL];
+    [pollACL setReadAccess:YES forUser:user];
+    [pollACL setWriteAccess:YES forUser:user];
+    [pollObject setACL:pollACL];
+    [pollObject saveEventually];
+    NSLog(@"Sharing ACLs have been set for %@", [user email]);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -115,13 +115,13 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 - (IBAction)selectImage:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    //TODO(joe): We want people on devices with cameras to either take a photo
+    //TODO(Yasumoto): We want people on devices with cameras to either take a photo
     // or select from their library. Will need to display a new view.
     /*if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    }
-    else {*/
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+     }
+     else {*/
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     //}
     [self presentModalViewController:picker animated:YES];
 }
@@ -148,33 +148,23 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
             if (succeeded) {
                 NSLog(@"Photo has been uploaded and saved!");
                 [pollObject setObject:imageFile forKey:@"image"];
-                [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if (succeeded) {
-                        NSLog(@"Saved poll (with photo)!");
-                        self.navigationItem.rightBarButtonItem = sender;
-                    }
-                    else {
-                        NSLog(@"Error: %@ %@", error, [error userInfo]);
-                    }
-                }];
             }
             else {
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
-
+            
         }];
     }
-    else {
-        [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                NSLog(@"Saved poll!");
-                self.navigationItem.rightBarButtonItem = sender;
-            }
-            else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-        }];
-    }
+    [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Saved poll!");
+            self.navigationItem.rightBarButtonItem = sender;
+        }
+        else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    self.navigationItem.rightBarButtonItem = sender;
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -182,7 +172,7 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSLog(@"Chose a photo.");
     self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-
+    
     [self.imageButton setImage:self.image forState:UIControlStateNormal];
     [self dismissModalViewControllerAnimated:YES];
 }
