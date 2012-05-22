@@ -203,9 +203,9 @@
 				D82CB20D1556051A00499A08 /* LoginViewController.m */,
 				D82712D81564BAD100FDAFFB /* SettingsViewController.h */,
 				D82712D91564BAD100FDAFFB /* SettingsViewController.m */,
-				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D876F1B1156504F6000793CD /* PollImageViewController.h */,
 				D876F1B2156504F6000793CD /* PollImageViewController.m */,
+				D82CB2061556051A00499A08 /* MainStoryboard_iPhone.storyboard */,
 				D854FDD51560B6DF00314501 /* ButtonPeoplePicker */,
 				D82CB1F91556051A00499A08 /* Supporting Files */,
 			);
