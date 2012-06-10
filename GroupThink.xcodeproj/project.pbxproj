@@ -13,7 +13,6 @@
 		D82712DA1564BAD100FDAFFB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82712D91564BAD100FDAFFB /* SettingsViewController.m */; };
 		D82712DD1564C14400FDAFFB /* choose.png in Resources */ = {isa = PBXBuildFile; fileRef = D82712DC1564C14400FDAFFB /* choose.png */; };
 		D82712DF1564C2A800FDAFFB /* choose_hilighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D82712DE1564C2A800FDAFFB /* choose_hilighted.png */; };
-		D82935EF156B6D5A0067AE38 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82935EE156B6D5A0067AE38 /* Parse.framework */; };
 		D82CB1F31556051A00499A08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
@@ -38,6 +37,10 @@
 		D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8374EE3155F06C200BC1617 /* libTestFlight.a */; };
 		D8374EE8155F06C200BC1617 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE4155F06C200BC1617 /* README.txt */; };
 		D8374EE9155F06C200BC1617 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE5155F06C200BC1617 /* release_notes.txt */; };
+		D8410FA2158528CD00926FAE /* CreatePollViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */; };
+		D8410FA515852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
+		D8410FA615852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
+		D8410FA715852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
 		D854FDDE1560B6DF00314501 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FDD71560B6DF00314501 /* AddPersonViewController.m */; };
 		D854FDE11560B6DF00314501 /* ButtonPeoplePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FDDD1560B6DF00314501 /* ButtonPeoplePicker.m */; };
 		D854FDF31560C09500314501 /* bottom-button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDEF1560C09500314501 /* bottom-button-bg.png */; };
@@ -48,6 +51,11 @@
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
 		D895D4C9155F11B800F7924D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C7155F11B800F7924D /* AddressBook.framework */; };
 		D895D4CA155F11B800F7924D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C8155F11B800F7924D /* AddressBookUI.framework */; };
+		D8E3EC24158522F40054E080 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB2151556051A00499A08 /* SenTestingKit.framework */; };
+		D8E3EC25158522F40054E080 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
+		D8E3EC26158522F40054E080 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
+		D8E3EC2C158522F40054E080 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E3EC2A158522F40054E080 /* InfoPlist.strings */; };
+		D8E3EC2F158522F40054E080 /* GatherLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E3EC2E158522F40054E080 /* GatherLogicTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +76,6 @@
 		D82712D91564BAD100FDAFFB /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D82712DC1564C14400FDAFFB /* choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = choose.png; path = ../Classes/choose.png; sourceTree = "<group>"; };
 		D82712DE1564C2A800FDAFFB /* choose_hilighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choose_hilighted.png; sourceTree = "<group>"; };
-		D82935EE156B6D5A0067AE38 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D82CB1EE1556051A00499A08 /* GroupThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82CB1F21556051A00499A08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D82CB1F41556051A00499A08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,6 +108,9 @@
 		D8374EE4155F06C200BC1617 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		D8374EE5155F06C200BC1617 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		D8374EE6155F06C200BC1617 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		D8410FA0158528CD00926FAE /* CreatePollViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewControllerTest.h; sourceTree = "<group>"; };
+		D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewControllerTest.m; sourceTree = "<group>"; };
+		D8410FA415852D9000926FAE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D854FDD61560B6DF00314501 /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
 		D854FDD71560B6DF00314501 /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
 		D854FDDC1560B6DF00314501 /* ButtonPeoplePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonPeoplePicker.h; sourceTree = "<group>"; };
@@ -116,6 +126,12 @@
 		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
 		D895D4C7155F11B800F7924D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D895D4C8155F11B800F7924D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D8E3EC23158522F40054E080 /* GatherLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GatherLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E3EC29158522F40054E080 /* GatherLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatherLogicTests-Info.plist"; sourceTree = "<group>"; };
+		D8E3EC2B158522F40054E080 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8E3EC2D158522F40054E080 /* GatherLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GatherLogicTests.h; sourceTree = "<group>"; };
+		D8E3EC2E158522F40054E080 /* GatherLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GatherLogicTests.m; sourceTree = "<group>"; };
+		D8E3EC30158522F40054E080 /* GatherLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatherLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +152,7 @@
 				D82CB1F51556051A00499A08 /* Foundation.framework in Frameworks */,
 				D82CB1F71556051A00499A08 /* CoreGraphics.framework in Frameworks */,
 				D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */,
-				D82935EF156B6D5A0067AE38 /* Parse.framework in Frameworks */,
+				D8410FA515852D9000926FAE /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +163,18 @@
 				D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */,
 				D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */,
 				D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */,
+				D8410FA615852D9000926FAE /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E3EC1F158522F40054E080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E3EC24158522F40054E080 /* SenTestingKit.framework in Frameworks */,
+				D8E3EC25158522F40054E080 /* UIKit.framework in Frameworks */,
+				D8E3EC26158522F40054E080 /* Foundation.framework in Frameworks */,
+				D8410FA715852D9000926FAE /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +188,7 @@
 				D895D4C8155F11B800F7924D /* AddressBookUI.framework */,
 				D82CB1F81556051A00499A08 /* GroupThink */,
 				D82CB21B1556051A00499A08 /* GroupThinkTests */,
+				D8E3EC27158522F40054E080 /* GatherLogicTests */,
 				D82CB1F11556051A00499A08 /* Frameworks */,
 				D82CB1EF1556051A00499A08 /* Products */,
 			);
@@ -170,6 +199,7 @@
 			children = (
 				D82CB1EE1556051A00499A08 /* GroupThink.app */,
 				D82CB2141556051A00499A08 /* GroupThinkTests.octest */,
+				D8E3EC23158522F40054E080 /* GatherLogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +207,7 @@
 		D82CB1F11556051A00499A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D82935EE156B6D5A0067AE38 /* Parse.framework */,
+				D8410FA415852D9000926FAE /* Parse.framework */,
 				D8374EE2155F06C200BC1617 /* TestFlightSDK1 */,
 				D82CB23A155605E900499A08 /* libz.1.1.3.dylib */,
 				D82CB238155605D900499A08 /* QuartzCore.framework */,
@@ -306,6 +336,28 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		D8E3EC27158522F40054E080 /* GatherLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8E3EC2D158522F40054E080 /* GatherLogicTests.h */,
+				D8E3EC2E158522F40054E080 /* GatherLogicTests.m */,
+				D8E3EC28158522F40054E080 /* Supporting Files */,
+				D8410FA0158528CD00926FAE /* CreatePollViewControllerTest.h */,
+				D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */,
+			);
+			path = GatherLogicTests;
+			sourceTree = "<group>";
+		};
+		D8E3EC28158522F40054E080 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8E3EC29158522F40054E080 /* GatherLogicTests-Info.plist */,
+				D8E3EC2A158522F40054E080 /* InfoPlist.strings */,
+				D8E3EC30158522F40054E080 /* GatherLogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,6 +397,24 @@
 			productReference = D82CB2141556051A00499A08 /* GroupThinkTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		D8E3EC22158522F40054E080 /* GatherLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E3EC33158522F40054E080 /* Build configuration list for PBXNativeTarget "GatherLogicTests" */;
+			buildPhases = (
+				D8E3EC1E158522F40054E080 /* Sources */,
+				D8E3EC1F158522F40054E080 /* Frameworks */,
+				D8E3EC20158522F40054E080 /* Resources */,
+				D8E3EC21158522F40054E080 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GatherLogicTests;
+			productName = GatherLogicTests;
+			productReference = D8E3EC23158522F40054E080 /* GatherLogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -368,6 +438,7 @@
 			targets = (
 				D82CB1ED1556051A00499A08 /* GroupThink */,
 				D82CB2131556051A00499A08 /* GroupThinkTests */,
+				D8E3EC22158522F40054E080 /* GatherLogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,10 +471,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8E3EC20158522F40054E080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E3EC2C158522F40054E080 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		D82CB2121556051A00499A08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		D8E3EC21158522F40054E080 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,6 +536,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8E3EC1E158522F40054E080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E3EC2F158522F40054E080 /* GatherLogicTests.m in Sources */,
+				D8410FA2158528CD00926FAE /* CreatePollViewControllerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -475,6 +576,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				D82CB21F1556051A00499A08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8E3EC2A158522F40054E080 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E3EC2B158522F40054E080 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -596,6 +705,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
@@ -613,12 +723,46 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroupThink/GroupThink-Prefix.pch";
 				INFOPLIST_FILE = "GroupThinkTests/GroupThinkTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		D8E3EC31158522F40054E080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatherLogicTests/GatherLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "GatherLogicTests/GatherLogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D8E3EC32158522F40054E080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatherLogicTests/GatherLogicTests-Prefix.pch";
+				INFOPLIST_FILE = "GatherLogicTests/GatherLogicTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -649,6 +793,15 @@
 			buildConfigurations = (
 				D82CB22A1556051A00499A08 /* Debug */,
 				D82CB22B1556051A00499A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E3EC33158522F40054E080 /* Build configuration list for PBXNativeTarget "GatherLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E3EC31158522F40054E080 /* Debug */,
+				D8E3EC32158522F40054E080 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
