@@ -9,6 +9,11 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "CreateParsePoll.h"
 
-@interface CreatePollViewControllerTest : SenTestCase
+@interface CreateParsePollTest : SenTestCase
 
+@end
+
+@interface CreateParsePoll ()
++ (void) sharePoll:(PFObject *) pollObject withMembers:(NSArray *)sharingMembers;
++ (PFObject *) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user;
 @end

@@ -10,7 +10,7 @@
 
 @interface CreateParsePoll ()
 + (void) sharePoll:(PFObject *) pollObject withMembers:(NSArray *)sharingMembers;
-+ (void) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user;
++ (PFObject *) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user;
 @end
 
 @implementation CreateParsePoll
@@ -32,6 +32,7 @@
                 if (succeeded) {
                     NSLog(@"Successfully sent out notification to %@", email);
                     [self addWriteAccessOnPoll:pollObject forUser:user];
+                    [pollObject saveEventually];
                 }
                 else {
                     NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -41,13 +42,12 @@
     }
 }
 
-+ (void) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user {
++ (PFObject *) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user {
     PFACL *pollACL = [pollObject ACL];
     [pollACL setReadAccess:YES forUser:user];
     [pollACL setWriteAccess:YES forUser:user];
     [pollObject setACL:pollACL];
-    [pollObject saveEventually];
-    NSLog(@"Sharing ACLs have been set for %@", [user email]);
+    return pollObject;
 }
 
 + (void) createNewPollWithQuestion:(NSString *)question

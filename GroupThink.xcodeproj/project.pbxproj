@@ -44,6 +44,13 @@
 		D8410FAA15852F2100926FAE /* CreateParsePoll.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA915852F2100926FAE /* CreateParsePoll.m */; };
 		D8410FAB15852F2100926FAE /* CreateParsePoll.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA915852F2100926FAE /* CreateParsePoll.m */; };
 		D8410FAC15852F2100926FAE /* CreateParsePoll.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA915852F2100926FAE /* CreateParsePoll.m */; };
+		D8410FAD1585459200926FAE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB234155605C100499A08 /* AudioToolbox.framework */; };
+		D8410FAF158545D100926FAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
+		D8410FB0158545DF00926FAE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB230155605A900499A08 /* SystemConfiguration.framework */; };
+		D8410FB1158545ED00926FAE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB236155605CC00499A08 /* Security.framework */; };
+		D8410FB21585460700926FAE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB22E1556059C00499A08 /* CFNetwork.framework */; };
+		D8410FB31585463400926FAE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB232155605B500499A08 /* MobileCoreServices.framework */; };
+		D8410FB41585464100926FAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D854FDDE1560B6DF00314501 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FDD71560B6DF00314501 /* AddPersonViewController.m */; };
 		D854FDE11560B6DF00314501 /* ButtonPeoplePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FDDD1560B6DF00314501 /* ButtonPeoplePicker.m */; };
 		D854FDF31560C09500314501 /* bottom-button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDEF1560C09500314501 /* bottom-button-bg.png */; };
@@ -55,7 +62,6 @@
 		D895D4C9155F11B800F7924D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C7155F11B800F7924D /* AddressBook.framework */; };
 		D895D4CA155F11B800F7924D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C8155F11B800F7924D /* AddressBookUI.framework */; };
 		D8E3EC24158522F40054E080 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB2151556051A00499A08 /* SenTestingKit.framework */; };
-		D8E3EC25158522F40054E080 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F21556051A00499A08 /* UIKit.framework */; };
 		D8E3EC26158522F40054E080 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F41556051A00499A08 /* Foundation.framework */; };
 		D8E3EC2C158522F40054E080 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8E3EC2A158522F40054E080 /* InfoPlist.strings */; };
 		D8E3EC2F158522F40054E080 /* GatherLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E3EC2E158522F40054E080 /* GatherLogicTests.m */; };
@@ -111,7 +117,7 @@
 		D8374EE4155F06C200BC1617 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		D8374EE5155F06C200BC1617 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		D8374EE6155F06C200BC1617 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		D8410FA0158528CD00926FAE /* CreateParsePollTest.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CreateParsePollTest.h; sourceTree = "<group>"; };
+		D8410FA0158528CD00926FAE /* CreateParsePollTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateParsePollTest.h; sourceTree = "<group>"; };
 		D8410FA1158528CD00926FAE /* CreateParsePollTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateParsePollTest.m; sourceTree = "<group>"; };
 		D8410FA415852D9000926FAE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D8410FA815852F2100926FAE /* CreateParsePoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateParsePoll.h; sourceTree = "<group>"; };
@@ -176,8 +182,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8410FB41585464100926FAE /* UIKit.framework in Frameworks */,
+				D8410FB31585463400926FAE /* MobileCoreServices.framework in Frameworks */,
+				D8410FB21585460700926FAE /* CFNetwork.framework in Frameworks */,
+				D8410FB1158545ED00926FAE /* Security.framework in Frameworks */,
+				D8410FB0158545DF00926FAE /* SystemConfiguration.framework in Frameworks */,
+				D8410FAF158545D100926FAE /* CoreGraphics.framework in Frameworks */,
+				D8410FAD1585459200926FAE /* AudioToolbox.framework in Frameworks */,
 				D8E3EC24158522F40054E080 /* SenTestingKit.framework in Frameworks */,
-				D8E3EC25158522F40054E080 /* UIKit.framework in Frameworks */,
 				D8E3EC26158522F40054E080 /* Foundation.framework in Frameworks */,
 				D8410FA715852D9000926FAE /* Parse.framework in Frameworks */,
 			);
@@ -189,8 +201,6 @@
 		D82CB1E31556051A00499A08 = {
 			isa = PBXGroup;
 			children = (
-				D895D4C7155F11B800F7924D /* AddressBook.framework */,
-				D895D4C8155F11B800F7924D /* AddressBookUI.framework */,
 				D82CB1F81556051A00499A08 /* GroupThink */,
 				D82CB21B1556051A00499A08 /* GroupThinkTests */,
 				D8E3EC27158522F40054E080 /* GatherLogicTests */,
@@ -212,6 +222,8 @@
 		D82CB1F11556051A00499A08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D895D4C7155F11B800F7924D /* AddressBook.framework */,
+				D895D4C8155F11B800F7924D /* AddressBookUI.framework */,
 				D8410FA415852D9000926FAE /* Parse.framework */,
 				D8374EE2155F06C200BC1617 /* TestFlightSDK1 */,
 				D82CB23A155605E900499A08 /* libz.1.1.3.dylib */,
