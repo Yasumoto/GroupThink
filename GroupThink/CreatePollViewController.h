@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
 #import "ButtonPeoplePicker.h"
 
 @interface CreatePollViewController : UIViewController <UITextFieldDelegate,
@@ -18,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
 @property (weak, nonatomic) IBOutlet UILabel *namesLabel;
 
-- (IBAction)selectImage:(id)sender;
+- (IBAction) selectImage:(id)sender;
 - (IBAction) createPollButtonPressed:(UIBarButtonItem *)sender;
 @end

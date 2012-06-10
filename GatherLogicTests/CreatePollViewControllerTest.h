@@ -10,5 +10,6 @@
 #import "CreatePollViewController.h"
 
 @interface CreatePollViewControllerTest : SenTestCase
+@property (nonatomic, strong) CreatePollViewController *createPollVC;
 
 @end

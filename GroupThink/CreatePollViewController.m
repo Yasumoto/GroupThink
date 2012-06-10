@@ -7,18 +7,18 @@
 //
 
 #import "CreatePollViewController.h"
+#import "CreateParsePoll.h"
 
 @interface CreatePollViewController ()
 @property (nonatomic, strong) ButtonPeoplePicker *peoplePicker;
 @property (nonatomic, strong) NSArray *sharingMembers;
 @property (nonatomic, strong) UIImage *image;
-- (void) sharePoll:(PFObject *) pollObject;
 @end
 
 @implementation CreatePollViewController
-@synthesize imageButton;
-@synthesize questionField = questionField;
-@synthesize namesLabel;
+@synthesize imageButton = _imageButton;
+@synthesize questionField = _questionField;
+@synthesize namesLabel = _namesLabel;
 @synthesize peoplePicker = _peoplePicker;
 @synthesize sharingMembers = _sharingMembers;
 @synthesize image = _image;
@@ -67,41 +67,6 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     }
 }
 
-- (void) sharePoll:(PFObject *)pollObject {
-    NSString *invitation = [NSString stringWithFormat:@"%@ has invited you to a poll", [[PFUser currentUser] username]];
-    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
-                          invitation, @"alert",
-                          [NSNumber numberWithInt:1], @"badge", nil];
-    for (NSString *email in self.sharingMembers) {
-        PFQuery *query = [PFQuery queryForUser];
-        [query whereKey:@"email" equalTo:email];
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            if(!error && [object isKindOfClass:[PFUser class]]) {
-                PFUser *user = (PFUser *) object;
-                NSLog(@"Sharing with %@", [user username]);
-                [PFPush sendPushDataToChannelInBackground:[user username] withData:data block:^(BOOL succeeded, NSError *error) {
-                    if (succeeded) {
-                        NSLog(@"Successfully sent out notification to %@", email);
-                        [self addWriteAccessOnPoll:pollObject forUser:user];
-                    }
-                    else {
-                        NSLog(@"Error: %@ %@", error, [error userInfo]);
-                    }
-                }];
-            }
-        }];
-    }
-}
-
-- (void) addWriteAccessOnPoll:(PFObject *)pollObject forUser:(PFUser *)user {
-    PFACL *pollACL = [pollObject ACL];
-    [pollACL setReadAccess:YES forUser:user];
-    [pollACL setWriteAccess:YES forUser:user];
-    [pollObject setACL:pollACL];
-    [pollObject saveEventually];
-    NSLog(@"Sharing ACLs have been set for %@", [user email]);
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -136,35 +101,9 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
-    PFObject *pollObject = [PFObject objectWithClassName:@"Poll"];
-    [pollObject setObject:self.questionField.text forKey:@"question"];
-    [pollObject setObject:self.sharingMembers forKey:@"members"];
-    [pollObject setObject:[[PFUser currentUser] email] forKey:@"owner"];
-    [self sharePoll:pollObject];
-    if (self.image) {
-        NSData *data = UIImagePNGRepresentation(self.image);
-        PFFile *imageFile = [PFFile fileWithName:@"pollImage.png" data:data];
-        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                NSLog(@"Photo has been uploaded and saved!");
-                [pollObject setObject:imageFile forKey:@"image"];
-            }
-            else {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-            
-        }];
-    }
-    [pollObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Saved poll!");
+    [CreateParsePoll createNewPollWithQuestion:self.questionField.text sharingMembers:self.sharingMembers imageData:UIImagePNGRepresentation(self.image) block:^{
             self.navigationItem.rightBarButtonItem = sender;
-        }
-        else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
     }];
-    self.navigationItem.rightBarButtonItem = sender;
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -219,7 +158,7 @@ static NSString *kSegueIdentifier = @"showButtonPeoplePicker";
 		}
 	}
     self.sharingMembers = [members copy];
-	[namesLabel setText:namesString];
+	[self.namesLabel setText:namesString];
 	CFRelease(addressBook);
 }
 

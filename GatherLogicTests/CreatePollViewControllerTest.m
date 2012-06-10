@@ -10,6 +10,8 @@
 
 @implementation CreatePollViewControllerTest
 
+@synthesize createPollVC;
+
 - (void)setUp
 {
     [super setUp];
@@ -26,7 +28,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in GatherLogicTests");
+    //STFail(@"Unit tests are not implemented yet in GatherLogicTests");
 }
 
 @end
