@@ -37,7 +37,7 @@
 		D8374EE7155F06C200BC1617 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8374EE3155F06C200BC1617 /* libTestFlight.a */; };
 		D8374EE8155F06C200BC1617 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE4155F06C200BC1617 /* README.txt */; };
 		D8374EE9155F06C200BC1617 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8374EE5155F06C200BC1617 /* release_notes.txt */; };
-		D8410FA2158528CD00926FAE /* CreatePollViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */; };
+		D8410FA2158528CD00926FAE /* CreateParsePollTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8410FA1158528CD00926FAE /* CreateParsePollTest.m */; };
 		D8410FA515852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
 		D8410FA615852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
 		D8410FA715852D9000926FAE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8410FA415852D9000926FAE /* Parse.framework */; };
@@ -111,8 +111,8 @@
 		D8374EE4155F06C200BC1617 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		D8374EE5155F06C200BC1617 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		D8374EE6155F06C200BC1617 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		D8410FA0158528CD00926FAE /* CreatePollViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewControllerTest.h; sourceTree = "<group>"; };
-		D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewControllerTest.m; sourceTree = "<group>"; };
+		D8410FA0158528CD00926FAE /* CreateParsePollTest.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CreateParsePollTest.h; sourceTree = "<group>"; };
+		D8410FA1158528CD00926FAE /* CreateParsePollTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateParsePollTest.m; sourceTree = "<group>"; };
 		D8410FA415852D9000926FAE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D8410FA815852F2100926FAE /* CreateParsePoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateParsePoll.h; sourceTree = "<group>"; };
 		D8410FA915852F2100926FAE /* CreateParsePoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateParsePoll.m; sourceTree = "<group>"; };
@@ -349,8 +349,8 @@
 				D8E3EC2D158522F40054E080 /* GatherLogicTests.h */,
 				D8E3EC2E158522F40054E080 /* GatherLogicTests.m */,
 				D8E3EC28158522F40054E080 /* Supporting Files */,
-				D8410FA0158528CD00926FAE /* CreatePollViewControllerTest.h */,
-				D8410FA1158528CD00926FAE /* CreatePollViewControllerTest.m */,
+				D8410FA0158528CD00926FAE /* CreateParsePollTest.h */,
+				D8410FA1158528CD00926FAE /* CreateParsePollTest.m */,
 			);
 			path = GatherLogicTests;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E3EC2F158522F40054E080 /* GatherLogicTests.m in Sources */,
-				D8410FA2158528CD00926FAE /* CreatePollViewControllerTest.m in Sources */,
+				D8410FA2158528CD00926FAE /* CreateParsePollTest.m in Sources */,
 				D8410FAC15852F2100926FAE /* CreateParsePoll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,14 +1,14 @@
 //
-//  CreatePollViewControllerTest.m
-//  GroupThink
+//  CreateParsePollTest.m
+//  Gather
 //
 //  Created by Joe Smith on 6/10/12.
-//  Copyright (c) 2012 GroupThink. All rights reserved.
+//  Copyright (c) 2012 Gather. All rights reserved.
 //
 
-#import "CreatePollViewControllerTest.h"
+#import "CreateParsePollTest.h"
 
-@implementation CreatePollViewControllerTest
+@implementation CreateParsePollTest
 
 @synthesize createPollVC;
 
