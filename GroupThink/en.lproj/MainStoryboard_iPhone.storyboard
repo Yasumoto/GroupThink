@@ -183,7 +183,7 @@
                     <navigationItem key="navigationItem" title="View Polls" id="oqd-Tv-1NP"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="className" value="Poll"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="keyToDisplay" value="question"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="textKey" value="question"/>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
             </objects>
@@ -574,7 +574,7 @@
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
         </class>
-        <class className="PFQueryTableViewController" superclassName="UITableViewController">
+        <class className="PFQueryTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
         </class>
         <class className="PollDetailViewController" superclassName="UIViewController">

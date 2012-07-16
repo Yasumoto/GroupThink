@@ -20,12 +20,11 @@
     if (self) {
         // This table displays a user's polls
         self.className = @"Poll";
-        self.keyToDisplay = @"question";
+        self.textKey = @"question";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = NO;
         self.objectsPerPage = 25;
     }
-    NSLog(@"The className of the PFTableView is: %@", self.className);
     return self;
 }
 
