@@ -90,6 +90,16 @@
 		D854FDF31560C09500314501 /* bottom-button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDEF1560C09500314501 /* bottom-button-bg.png */; };
 		D854FDF41560C09500314501 /* ButtonCorners.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDF01560C09500314501 /* ButtonCorners.png */; };
 		D854FDF51560C09500314501 /* ButtonCorners@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D854FDF11560C09500314501 /* ButtonCorners@2x.png */; };
+		D85E299215BCA2B2004800A3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C7155F11B800F7924D /* AddressBook.framework */; };
+		D85E299315BCA2B2004800A3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895D4C8155F11B800F7924D /* AddressBookUI.framework */; };
+		D85E299415BCA2BA004800A3 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB23A155605E900499A08 /* libz.1.1.3.dylib */; };
+		D85E299515BCA2C2004800A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB238155605D900499A08 /* QuartzCore.framework */; };
+		D85E299615BCA2CC004800A3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB236155605CC00499A08 /* Security.framework */; };
+		D85E299715BCA2D2004800A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB234155605C100499A08 /* AudioToolbox.framework */; };
+		D85E299815BCA2DA004800A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB232155605B500499A08 /* MobileCoreServices.framework */; };
+		D85E299915BCA2F3004800A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB230155605A900499A08 /* SystemConfiguration.framework */; };
+		D85E299A15BCA2FB004800A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB22E1556059C00499A08 /* CFNetwork.framework */; };
+		D85E299B15BCA30A004800A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82CB1F61556051A00499A08 /* CoreGraphics.framework */; };
 		D863DF5B1559F63600FA9934 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D863DF5A1559F63600FA9934 /* CreatePollViewController.m */; };
 		D876F1B3156504F6000793CD /* PollImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D876F1B2156504F6000793CD /* PollImageViewController.m */; };
 		D88D7F92155A1843002C6C36 /* PollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88D7F91155A1843002C6C36 /* PollDetailViewController.m */; };
@@ -214,7 +224,7 @@
 		D88D7F91155A1843002C6C36 /* PollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollDetailViewController.m; sourceTree = "<group>"; };
 		D895D4C7155F11B800F7924D /* AddressBook.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D895D4C8155F11B800F7924D /* AddressBookUI.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		D8D22F9515BB8CA50006090F /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		D8B8BCD915BB9EB90036AF19 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		F199A7333426420FA1040FFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -245,6 +255,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85E299B15BCA30A004800A3 /* CoreGraphics.framework in Frameworks */,
+				D85E299A15BCA2FB004800A3 /* CFNetwork.framework in Frameworks */,
+				D85E299915BCA2F3004800A3 /* SystemConfiguration.framework in Frameworks */,
+				D85E299815BCA2DA004800A3 /* MobileCoreServices.framework in Frameworks */,
+				D85E299715BCA2D2004800A3 /* AudioToolbox.framework in Frameworks */,
+				D85E299615BCA2CC004800A3 /* Security.framework in Frameworks */,
+				D85E299515BCA2C2004800A3 /* QuartzCore.framework in Frameworks */,
+				D85E299415BCA2BA004800A3 /* libz.1.1.3.dylib in Frameworks */,
+				D85E299215BCA2B2004800A3 /* AddressBook.framework in Frameworks */,
+				D85E299315BCA2B2004800A3 /* AddressBookUI.framework in Frameworks */,
 				D82CB2161556051A00499A08 /* SenTestingKit.framework in Frameworks */,
 				D82CB2171556051A00499A08 /* UIKit.framework in Frameworks */,
 				D82CB2181556051A00499A08 /* Foundation.framework in Frameworks */,
@@ -258,7 +278,7 @@
 		D82CB1E31556051A00499A08 = {
 			isa = PBXGroup;
 			children = (
-				D8D22F9515BB8CA50006090F /* libPods.a */,
+				D8B8BCD915BB9EB90036AF19 /* libPods.a */,
 				D82CB1F81556051A00499A08 /* GroupThink */,
 				D82CB21B1556051A00499A08 /* GroupThinkTests */,
 				D82CB1F11556051A00499A08 /* Frameworks */,
@@ -511,6 +531,7 @@
 				D82CB20F1556051A00499A08 /* Sources */,
 				D82CB2101556051A00499A08 /* Frameworks */,
 				D82CB2111556051A00499A08 /* Resources */,
+				D8B8BCDB15BB9EEC0036AF19 /* Copy Pods Resources */,
 				D82CB2121556051A00499A08 /* ShellScript */,
 			);
 			buildRules = (
@@ -652,6 +673,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		D8B8BCDB15BB9EEC0036AF19 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -723,6 +758,7 @@
 /* Begin XCBuildConfiguration section */
 		D82CB2241556051A00499A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266CB12CDB12491DA8912A40 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -755,6 +791,7 @@
 		};
 		D82CB2251556051A00499A08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266CB12CDB12491DA8912A40 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -867,6 +904,7 @@
 					"\"${PODS_ROOT}/OCHamcrest\"",
 				);
 				INFOPLIST_FILE = "GroupThinkTests/GroupThinkTests-Info.plist";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
