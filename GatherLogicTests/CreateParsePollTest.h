@@ -6,6 +6,12 @@
 //  Copyright (c) 2012 Gather. All rights reserved.
 //
 
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+#define MOCKITO_SHORTHAND
+#import <OCMockitoIOS/OCMockitoIOS.h>
+
 #import <SenTestingKit/SenTestingKit.h>
 #import "CreateParsePoll.h"
 

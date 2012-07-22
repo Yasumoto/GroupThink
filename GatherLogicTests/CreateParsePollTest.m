@@ -8,24 +8,6 @@
 
 #import "CreateParsePollTest.h"
 
-@interface MockPFUser : PFUser @end
-@implementation MockPFUser
-
-- (void)setACL:(PFACL *)ACL {
-    self.ACL = ACL;
-}
-
-@end
-
-@interface MockPFACL : PFACL @end
-@implementation MockPFACL
-
-- (void)setReadAccess:(BOOL)allowed forUser:(PFUser *)user {
-    
-}
-
-@end
-
 @implementation CreateParsePollTest
 
 - (void)setUp
@@ -45,9 +27,9 @@
 - (void)testAddWriteAccessOnPollSuccess
 {
     PFObject *object = [[PFObject alloc] initWithClassName:@"Poll"];
-    PFACL *acl = [PFACL ACL];
-    [object setACL:acl];
-    PFUser *user = [[MockPFUser alloc] init];
+    PFACL *mockACL = mock([[PFACL ACL] class]);
+    [object setACL:mockACL];
+    PFUser *user = mock([PFUser class]);
     PFObject *sharedObject = [CreateParsePoll addWriteAccessOnPoll:object forUser:user];
     PFACL *sharedACL = [sharedObject ACL];
     NSLog(@"ACL is: %@", sharedACL);
