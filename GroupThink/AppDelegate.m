@@ -19,13 +19,13 @@
 {
     // ****************************************************************************
     // Uncomment and fill in with your Parse credentials:
-    [Parse setApplicationId:@"msz0pSBTRg6TvKklFBfVzJna8gpw8aNMSRQGMCxv"
-                  clientKey:@"a6gRK1R3qDMbSyD32blZtKZWTPAmGVFq2CxsAH5m"];
+    [Parse setApplicationId:@""
+                  clientKey:@"application already deleted, sorry"];
     // If you are using Facebook, uncomment and fill in with your Facebook App Id:
     [PFFacebookUtils initializeWithApplicationId:@"311355818940970"];
     // ****************************************************************************
 
-    [TestFlight takeOff:@"aac013542c07cae2bc366df9f05be55d_ODk3MTYyMDEyLTA1LTEyIDE2OjQ1OjAzLjQ3NDA0Nw"];
+    [TestFlight takeOff:@"deprecated"];
 #define TESTING 1
 #ifdef TESTING
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
